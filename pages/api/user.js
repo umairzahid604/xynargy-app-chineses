@@ -78,3 +78,10 @@ export default async function handler(req, res) {
         });
 
 }
+
+
+module.exports.config = {
+    api: {
+      timeout: 20000 // 20 seconds
+    }
+  };
