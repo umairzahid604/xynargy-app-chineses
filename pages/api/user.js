@@ -66,16 +66,17 @@ export default async function handler(req, res) {
         maskedData: [maskedData]
     });
 
+    res.send("hello")
 
-    user.save()
-        .then(() => {
-            console.log('User saved to the database');
-            res.status(200).json({success:{message:"User Data Successfully saved to Database"}})            
-        })
-        .catch((error) => {
-            console.error('Error saving user to the database:', error);
-            res.status(500).json({error:{message:"User data could not be saved to Database"}})
-        });
+    // user.save()
+    //     .then(() => {
+    //         console.log('User saved to the database');
+    //         res.status(200).json({success:{message:"User Data Successfully saved to Database"}})            
+    //     })
+    //     .catch((error) => {
+    //         console.error('Error saving user to the database:', error);
+    //         res.status(500).json({error:{message:"User data could not be saved to Database"}})
+    //     });
 
 }
 
