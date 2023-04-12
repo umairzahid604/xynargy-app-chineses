@@ -1,0 +1,2827 @@
+{
+    "_id": "64105b40fb0bae99b4250c03",
+    "email": "zahid@gmail.com",
+    "imageUrl": "https://storage.googleapis.com/e4871fc8-42cd-42fd-ac27-3a1da19e33ff/subjects/696e90f3-6c18-40cd-91f3-d7dc1b17d155/batches/7b0abd97-44ae-4462-b0b7-35eee96ad09a/77662d16-6b50-40a2-9fc6-8fb458f548cc_2023-03-14_10-48/selfie_front_face_restored_rgba.png?Expires=2624893534&GoogleAccessId=bucket-account%40sasuke-core-prd.iam.gserviceaccount.com&Signature=f0UIcfhbk85arXrIhcv9lFE9AUXyElMO3yD3zwC7ke4c2qiZGJv52nN1NI73f4K9DvQseJlnsrey0vB3WxWoKshyoLWRdVsPUlHGxplCMgKycETggavc3IXTZM8d%2FkIBX06NSTS%2FBFp9QefGAjD2fFLMZyfk6zLt66Ya0oQ8zZh%2FLyJvnQRt6TKgomHO%2Fb3BFXj2t5%2FoZqfUPuYQdDhXCPZMn5ch8xTLM9d4O7mTj6iNFD1lhzUmwdOqpqjJN9pf%2BEI7Tw7SG1DS7kZTOjUNrBwhmR3smxsMGRmjLKmloEPZOYA%2Fe9%2Fe29yyzyHFxrAA3L%2BfSX44eA3XpD8GR7v2Ag%3D%3D",
+    "simpleData": [
+      {
+        "idempotency_id": "7fb93229-5494-47e6-bb13-8d2de12ade5d",
+        "event": "photo_calculated_by_app",
+        "image_id": "77662d16-6b50-40a2-9fc6-8fb458f548cc",
+        "batch_id": "7b0abd97-44ae-4462-b0b7-35eee96ad09a",
+        "subject_id": "696e90f3-6c18-40cd-91f3-d7dc1b17d155",
+        "subject_name": "t99vUfjV8f3oUysBzRnkPK",
+        "dataset_id": "e4871fc8-42cd-42fd-ac27-3a1da19e33ff",
+        "company_id": "7affc037-ee40-46b9-b49e-bc430d59aaa7",
+        "application_id": "8b5b3acc-480b-4412-8d2c-ebe6ab4384d7",
+        "application_name": "Face Skin Metrics 2.0",
+        "application_run_id": "1796b7bf-58be-49f0-be95-c0e656bdce25",
+        "area_results": [
+          {
+            "area_name": "face",
+            "name": "Redness Score",
+            "value": 54,
+            "tech_name": "redness_score",
+            "widget_meta": null,
+            "widget_type": "bad_good_line",
+            "sub_metrics": [
+              {
+                "name": "Redness Local Score",
+                "value": 40,
+                "tech_name": "redness_local_score",
+                "widget_meta": null,
+                "widget_type": "bad_good_line"
+              },
+              {
+                "name": "Redness Global Score",
+                "value": 66,
+                "tech_name": "redness_global_score",
+                "widget_meta": null,
+                "widget_type": "bad_good_line"
+              }
+            ]
+          },
+          {
+            "area_name": "nose",
+            "name": "Redness Score",
+            "value": 41,
+            "tech_name": "redness_score",
+            "widget_meta": null,
+            "widget_type": "bad_good_line",
+            "sub_metrics": [
+              {
+                "name": "Redness Local Score",
+                "value": 11,
+                "tech_name": "redness_local_score",
+                "widget_meta": null,
+                "widget_type": "bad_good_line"
+              },
+              {
+                "name": "Redness Global Score",
+                "value": 68,
+                "tech_name": "redness_global_score",
+                "widget_meta": null,
+                "widget_type": "bad_good_line"
+              }
+            ]
+          },
+          {
+            "area_name": "forehead",
+            "name": "Redness Score",
+            "value": 85,
+            "tech_name": "redness_score",
+            "widget_meta": null,
+            "widget_type": "bad_good_line",
+            "sub_metrics": [
+              {
+                "name": "Redness Local Score",
+                "value": 82,
+                "tech_name": "redness_local_score",
+                "widget_meta": null,
+                "widget_type": "bad_good_line"
+              },
+              {
+                "name": "Redness Global Score",
+                "value": 86,
+                "tech_name": "redness_global_score",
+                "widget_meta": null,
+                "widget_type": "bad_good_line"
+              }
+            ]
+          },
+          {
+            "area_name": "right_cheek",
+            "name": "Redness Score",
+            "value": 29,
+            "tech_name": "redness_score",
+            "widget_meta": null,
+            "widget_type": "bad_good_line",
+            "sub_metrics": [
+              {
+                "name": "Redness Local Score",
+                "value": 7,
+                "tech_name": "redness_local_score",
+                "widget_meta": null,
+                "widget_type": "bad_good_line"
+              },
+              {
+                "name": "Redness Global Score",
+                "value": 50,
+                "tech_name": "redness_global_score",
+                "widget_meta": null,
+                "widget_type": "bad_good_line"
+              }
+            ]
+          },
+          {
+            "area_name": "left_cheek",
+            "name": "Redness Score",
+            "value": 53,
+            "tech_name": "redness_score",
+            "widget_meta": null,
+            "widget_type": "bad_good_line",
+            "sub_metrics": [
+              {
+                "name": "Redness Local Score",
+                "value": 35,
+                "tech_name": "redness_local_score",
+                "widget_meta": null,
+                "widget_type": "bad_good_line"
+              },
+              {
+                "name": "Redness Global Score",
+                "value": 70,
+                "tech_name": "redness_global_score",
+                "widget_meta": null,
+                "widget_type": "bad_good_line"
+              }
+            ]
+          },
+          {
+            "area_name": "chin",
+            "name": "Redness Score",
+            "value": 69,
+            "tech_name": "redness_score",
+            "widget_meta": null,
+            "widget_type": "bad_good_line",
+            "sub_metrics": [
+              {
+                "name": "Redness Local Score",
+                "value": 78,
+                "tech_name": "redness_local_score",
+                "widget_meta": null,
+                "widget_type": "bad_good_line"
+              },
+              {
+                "name": "Redness Global Score",
+                "value": 59,
+                "tech_name": "redness_global_score",
+                "widget_meta": null,
+                "widget_type": "bad_good_line"
+              }
+            ]
+          },
+          {
+            "area_name": "face",
+            "name": "Perceived Age",
+            "value": 38,
+            "tech_name": "perceived_age",
+            "widget_meta": null,
+            "widget_type": "numeric",
+            "sub_metrics": []
+          },
+          {
+            "area_name": "face",
+            "name": "Uniformness Score",
+            "value": 13,
+            "tech_name": "uniformness_score",
+            "widget_meta": null,
+            "widget_type": "bad_good_line",
+            "sub_metrics": []
+          },
+          {
+            "area_name": "forehead_n_bridge",
+            "name": "Uniformness Score",
+            "value": 40,
+            "tech_name": "uniformness_score",
+            "widget_meta": null,
+            "widget_type": "bad_good_line",
+            "sub_metrics": []
+          },
+          {
+            "area_name": "right_cheek",
+            "name": "Uniformness Score",
+            "value": 0,
+            "tech_name": "uniformness_score",
+            "widget_meta": null,
+            "widget_type": "bad_good_line",
+            "sub_metrics": []
+          },
+          {
+            "area_name": "left_cheek",
+            "name": "Uniformness Score",
+            "value": 0,
+            "tech_name": "uniformness_score",
+            "widget_meta": null,
+            "widget_type": "bad_good_line",
+            "sub_metrics": []
+          },
+          {
+            "area_name": "face",
+            "name": "Eye Area Condition",
+            "value": 63,
+            "tech_name": "eye_area_condition",
+            "widget_meta": null,
+            "widget_type": "bad_good_line",
+            "sub_metrics": [
+              {
+                "name": "Dark Circle Score",
+                "value": 58,
+                "tech_name": "dark_circles_score",
+                "widget_meta": null,
+                "widget_type": "bad_good_line"
+              },
+              {
+                "name": "Eye Bags Score",
+                "value": 67,
+                "tech_name": "eye_bags_score",
+                "widget_meta": null,
+                "widget_type": "bad_good_line"
+              },
+              {
+                "name": "Lacrimal Grooves Score",
+                "value": 73,
+                "tech_name": "lacrimal_grooves_score",
+                "widget_meta": null,
+                "widget_type": "bad_good_line"
+              }
+            ]
+          },
+          {
+            "area_name": "left_eye_area",
+            "name": "Eye Area Condition",
+            "value": 66,
+            "tech_name": "eye_area_condition",
+            "widget_meta": null,
+            "widget_type": "bad_good_line",
+            "sub_metrics": [
+              {
+                "name": "Dark Circle Score",
+                "value": 60,
+                "tech_name": "dark_circles_score",
+                "widget_meta": null,
+                "widget_type": "bad_good_line"
+              },
+              {
+                "name": "Eye Bags Score",
+                "value": 73,
+                "tech_name": "eye_bags_score",
+                "widget_meta": null,
+                "widget_type": "bad_good_line"
+              },
+              {
+                "name": "Lacrimal Grooves Score",
+                "value": 73,
+                "tech_name": "lacrimal_grooves_score",
+                "widget_meta": null,
+                "widget_type": "bad_good_line"
+              }
+            ]
+          },
+          {
+            "area_name": "right_eye_area",
+            "name": "Eye Area Condition",
+            "value": 61,
+            "tech_name": "eye_area_condition",
+            "widget_meta": null,
+            "widget_type": "bad_good_line",
+            "sub_metrics": [
+              {
+                "name": "Dark Circle Score",
+                "value": 56,
+                "tech_name": "dark_circles_score",
+                "widget_meta": null,
+                "widget_type": "bad_good_line"
+              },
+              {
+                "name": "Eye Bags Score",
+                "value": 62,
+                "tech_name": "eye_bags_score",
+                "widget_meta": null,
+                "widget_type": "bad_good_line"
+              },
+              {
+                "name": "Lacrimal Grooves Score",
+                "value": 73,
+                "tech_name": "lacrimal_grooves_score",
+                "widget_meta": null,
+                "widget_type": "bad_good_line"
+              }
+            ]
+          },
+          {
+            "area_name": "face",
+            "name": "Pores Score",
+            "value": 91,
+            "tech_name": "Pores_score",
+            "widget_meta": null,
+            "widget_type": "bad_good_line",
+            "sub_metrics": [
+              {
+                "name": "Pores Number",
+                "value": 108,
+                "tech_name": "pores_number",
+                "widget_meta": null,
+                "widget_type": "numeric"
+              },
+              {
+                "name": "Pores Density",
+                "value": 0,
+                "tech_name": "pores_density",
+                "widget_meta": null,
+                "widget_type": "density"
+              }
+            ]
+          },
+          {
+            "area_name": "nose",
+            "name": "Pores Score",
+            "value": 83,
+            "tech_name": "Pores_score",
+            "widget_meta": null,
+            "widget_type": "bad_good_line",
+            "sub_metrics": []
+          },
+          {
+            "area_name": "forehead",
+            "name": "Pores Score",
+            "value": 94,
+            "tech_name": "Pores_score",
+            "widget_meta": null,
+            "widget_type": "bad_good_line",
+            "sub_metrics": []
+          },
+          {
+            "area_name": "right_cheek",
+            "name": "Pores Score",
+            "value": 92,
+            "tech_name": "Pores_score",
+            "widget_meta": null,
+            "widget_type": "bad_good_line",
+            "sub_metrics": []
+          },
+          {
+            "area_name": "left_cheek",
+            "name": "Pores Score",
+            "value": 91,
+            "tech_name": "Pores_score",
+            "widget_meta": null,
+            "widget_type": "bad_good_line",
+            "sub_metrics": []
+          },
+          {
+            "area_name": "face",
+            "name": "Acne score",
+            "value": 97,
+            "tech_name": "acne_score",
+            "widget_meta": null,
+            "widget_type": "bad_good_line",
+            "sub_metrics": [
+              {
+                "name": "Number of acne regions",
+                "value": 1,
+                "tech_name": "number_of_regions",
+                "widget_meta": null,
+                "widget_type": "numeric"
+              },
+              {
+                "name": "Acne regions density score",
+                "value": 0,
+                "tech_name": "density_score",
+                "widget_meta": null,
+                "widget_type": "density"
+              },
+              {
+                "name": "Average intensity of acne regions",
+                "value": 25,
+                "tech_name": "average_intensity_score",
+                "widget_meta": null,
+                "widget_type": "density"
+              }
+            ]
+          },
+          {
+            "area_name": "nose",
+            "name": "Acne score",
+            "value": 100,
+            "tech_name": "acne_score",
+            "widget_meta": null,
+            "widget_type": "bad_good_line",
+            "sub_metrics": [
+              {
+                "name": "Number of acne regions",
+                "value": 0,
+                "tech_name": "number_of_regions",
+                "widget_meta": null,
+                "widget_type": "numeric"
+              },
+              {
+                "name": "Acne regions density score",
+                "value": 0,
+                "tech_name": "density_score",
+                "widget_meta": null,
+                "widget_type": "density"
+              },
+              {
+                "name": "Average intensity of acne regions",
+                "value": 0,
+                "tech_name": "average_intensity_score",
+                "widget_meta": null,
+                "widget_type": "density"
+              }
+            ]
+          },
+          {
+            "area_name": "left_cheek",
+            "name": "Acne score",
+            "value": 100,
+            "tech_name": "acne_score",
+            "widget_meta": null,
+            "widget_type": "bad_good_line",
+            "sub_metrics": [
+              {
+                "name": "Number of acne regions",
+                "value": 0,
+                "tech_name": "number_of_regions",
+                "widget_meta": null,
+                "widget_type": "numeric"
+              },
+              {
+                "name": "Acne regions density score",
+                "value": 0,
+                "tech_name": "density_score",
+                "widget_meta": null,
+                "widget_type": "density"
+              },
+              {
+                "name": "Average intensity of acne regions",
+                "value": 0,
+                "tech_name": "average_intensity_score",
+                "widget_meta": null,
+                "widget_type": "density"
+              }
+            ]
+          },
+          {
+            "area_name": "right_cheek",
+            "name": "Acne score",
+            "value": 100,
+            "tech_name": "acne_score",
+            "widget_meta": null,
+            "widget_type": "bad_good_line",
+            "sub_metrics": [
+              {
+                "name": "Number of acne regions",
+                "value": 0,
+                "tech_name": "number_of_regions",
+                "widget_meta": null,
+                "widget_type": "numeric"
+              },
+              {
+                "name": "Acne regions density score",
+                "value": 0,
+                "tech_name": "density_score",
+                "widget_meta": null,
+                "widget_type": "density"
+              },
+              {
+                "name": "Average intensity of acne regions",
+                "value": 0,
+                "tech_name": "average_intensity_score",
+                "widget_meta": null,
+                "widget_type": "density"
+              }
+            ]
+          },
+          {
+            "area_name": "forehead",
+            "name": "Acne score",
+            "value": 91,
+            "tech_name": "acne_score",
+            "widget_meta": null,
+            "widget_type": "bad_good_line",
+            "sub_metrics": [
+              {
+                "name": "Number of acne regions",
+                "value": 1,
+                "tech_name": "number_of_regions",
+                "widget_meta": null,
+                "widget_type": "numeric"
+              },
+              {
+                "name": "Acne regions density score",
+                "value": 0,
+                "tech_name": "density_score",
+                "widget_meta": null,
+                "widget_type": "density"
+              },
+              {
+                "name": "Average intensity of acne regions",
+                "value": 100,
+                "tech_name": "average_intensity_score",
+                "widget_meta": null,
+                "widget_type": "density"
+              }
+            ]
+          },
+          {
+            "area_name": "chin",
+            "name": "Acne score",
+            "value": 100,
+            "tech_name": "acne_score",
+            "widget_meta": null,
+            "widget_type": "bad_good_line",
+            "sub_metrics": [
+              {
+                "name": "Number of acne regions",
+                "value": 0,
+                "tech_name": "number_of_regions",
+                "widget_meta": null,
+                "widget_type": "numeric"
+              },
+              {
+                "name": "Acne regions density score",
+                "value": 0,
+                "tech_name": "density_score",
+                "widget_meta": null,
+                "widget_type": "density"
+              },
+              {
+                "name": "Average intensity of acne regions",
+                "value": 0,
+                "tech_name": "average_intensity_score",
+                "widget_meta": null,
+                "widget_type": "density"
+              }
+            ]
+          },
+          {
+            "area_name": "face",
+            "name": "Pigmentation score",
+            "value": 93,
+            "tech_name": "pigmentation_score",
+            "widget_meta": null,
+            "widget_type": "bad_good_line",
+            "sub_metrics": [
+              {
+                "name": "Number of pigmentation spots",
+                "value": 5,
+                "tech_name": "number_of_regions",
+                "widget_meta": null,
+                "widget_type": "numeric"
+              },
+              {
+                "name": "Pigmentation density score",
+                "value": 0,
+                "tech_name": "density_score",
+                "widget_meta": null,
+                "widget_type": "density"
+              },
+              {
+                "name": "Average intensity of pigmentation",
+                "value": 0,
+                "tech_name": "average_intensity_score",
+                "widget_meta": null,
+                "widget_type": "density"
+              },
+              {
+                "name": "Average size of pigmentation spots",
+                "value": 37,
+                "tech_name": "average_region_size",
+                "widget_meta": null,
+                "widget_type": "density"
+              },
+              {
+                "name": "Standard deviation of pigmentation spots size",
+                "value": 2,
+                "tech_name": "region_size_std",
+                "widget_meta": null,
+                "widget_type": "density"
+              }
+            ]
+          },
+          {
+            "area_name": "nose",
+            "name": "Pigmentation score",
+            "value": 93,
+            "tech_name": "pigmentation_score",
+            "widget_meta": null,
+            "widget_type": "bad_good_line",
+            "sub_metrics": [
+              {
+                "name": "Number of pigmentation spots",
+                "value": 1,
+                "tech_name": "number_of_regions",
+                "widget_meta": null,
+                "widget_type": "numeric"
+              },
+              {
+                "name": "Pigmentation density score",
+                "value": 0,
+                "tech_name": "density_score",
+                "widget_meta": null,
+                "widget_type": "density"
+              },
+              {
+                "name": "Average intensity of pigmentation",
+                "value": 0,
+                "tech_name": "average_intensity_score",
+                "widget_meta": null,
+                "widget_type": "density"
+              },
+              {
+                "name": "Average size of pigmentation spots",
+                "value": 8,
+                "tech_name": "average_region_size",
+                "widget_meta": null,
+                "widget_type": "density"
+              },
+              {
+                "name": "Standard deviation of pigmentation spots size",
+                "value": 0,
+                "tech_name": "region_size_std",
+                "widget_meta": null,
+                "widget_type": "density"
+              }
+            ]
+          },
+          {
+            "area_name": "left_cheek",
+            "name": "Pigmentation score",
+            "value": 93,
+            "tech_name": "pigmentation_score",
+            "widget_meta": null,
+            "widget_type": "bad_good_line",
+            "sub_metrics": [
+              {
+                "name": "Number of pigmentation spots",
+                "value": 1,
+                "tech_name": "number_of_regions",
+                "widget_meta": null,
+                "widget_type": "numeric"
+              },
+              {
+                "name": "Pigmentation density score",
+                "value": 0,
+                "tech_name": "density_score",
+                "widget_meta": null,
+                "widget_type": "density"
+              },
+              {
+                "name": "Average intensity of pigmentation",
+                "value": 0,
+                "tech_name": "average_intensity_score",
+                "widget_meta": null,
+                "widget_type": "density"
+              },
+              {
+                "name": "Average size of pigmentation spots",
+                "value": 40,
+                "tech_name": "average_region_size",
+                "widget_meta": null,
+                "widget_type": "density"
+              },
+              {
+                "name": "Standard deviation of pigmentation spots size",
+                "value": 0,
+                "tech_name": "region_size_std",
+                "widget_meta": null,
+                "widget_type": "density"
+              }
+            ]
+          },
+          {
+            "area_name": "right_cheek",
+            "name": "Pigmentation score",
+            "value": 89,
+            "tech_name": "pigmentation_score",
+            "widget_meta": null,
+            "widget_type": "bad_good_line",
+            "sub_metrics": [
+              {
+                "name": "Number of pigmentation spots",
+                "value": 1,
+                "tech_name": "number_of_regions",
+                "widget_meta": null,
+                "widget_type": "numeric"
+              },
+              {
+                "name": "Pigmentation density score",
+                "value": 0,
+                "tech_name": "density_score",
+                "widget_meta": null,
+                "widget_type": "density"
+              },
+              {
+                "name": "Average intensity of pigmentation",
+                "value": 0,
+                "tech_name": "average_intensity_score",
+                "widget_meta": null,
+                "widget_type": "density"
+              },
+              {
+                "name": "Average size of pigmentation spots",
+                "value": 88,
+                "tech_name": "average_region_size",
+                "widget_meta": null,
+                "widget_type": "density"
+              },
+              {
+                "name": "Standard deviation of pigmentation spots size",
+                "value": 0,
+                "tech_name": "region_size_std",
+                "widget_meta": null,
+                "widget_type": "density"
+              }
+            ]
+          },
+          {
+            "area_name": "forehead",
+            "name": "Pigmentation score",
+            "value": 94,
+            "tech_name": "pigmentation_score",
+            "widget_meta": null,
+            "widget_type": "bad_good_line",
+            "sub_metrics": [
+              {
+                "name": "Number of pigmentation spots",
+                "value": 2,
+                "tech_name": "number_of_regions",
+                "widget_meta": null,
+                "widget_type": "numeric"
+              },
+              {
+                "name": "Pigmentation density score",
+                "value": 0,
+                "tech_name": "density_score",
+                "widget_meta": null,
+                "widget_type": "density"
+              },
+              {
+                "name": "Average intensity of pigmentation",
+                "value": 0,
+                "tech_name": "average_intensity_score",
+                "widget_meta": null,
+                "widget_type": "density"
+              },
+              {
+                "name": "Average size of pigmentation spots",
+                "value": 20,
+                "tech_name": "average_region_size",
+                "widget_meta": null,
+                "widget_type": "density"
+              },
+              {
+                "name": "Standard deviation of pigmentation spots size",
+                "value": 10,
+                "tech_name": "region_size_std",
+                "widget_meta": null,
+                "widget_type": "density"
+              }
+            ]
+          },
+          {
+            "area_name": "chin",
+            "name": "Pigmentation score",
+            "value": 100,
+            "tech_name": "pigmentation_score",
+            "widget_meta": null,
+            "widget_type": "bad_good_line",
+            "sub_metrics": [
+              {
+                "name": "Number of pigmentation spots",
+                "value": 0,
+                "tech_name": "number_of_regions",
+                "widget_meta": null,
+                "widget_type": "numeric"
+              },
+              {
+                "name": "Pigmentation density score",
+                "value": 0,
+                "tech_name": "density_score",
+                "widget_meta": null,
+                "widget_type": "density"
+              },
+              {
+                "name": "Average intensity of pigmentation",
+                "value": 0,
+                "tech_name": "average_intensity_score",
+                "widget_meta": null,
+                "widget_type": "density"
+              },
+              {
+                "name": "Average size of pigmentation spots",
+                "value": 0,
+                "tech_name": "average_region_size",
+                "widget_meta": null,
+                "widget_type": "density"
+              },
+              {
+                "name": "Standard deviation of pigmentation spots size",
+                "value": 0,
+                "tech_name": "region_size_std",
+                "widget_meta": null,
+                "widget_type": "density"
+              }
+            ]
+          },
+          {
+            "area_name": "face",
+            "name": "Eye Age",
+            "value": 43,
+            "tech_name": "eye_age",
+            "widget_meta": null,
+            "widget_type": "numeric",
+            "sub_metrics": []
+          },
+          {
+            "area_name": "left_eye_area",
+            "name": "Left Eye Age",
+            "value": 45,
+            "tech_name": "left_eye_age",
+            "widget_meta": null,
+            "widget_type": "numeric",
+            "sub_metrics": []
+          },
+          {
+            "area_name": "right_eye_area",
+            "name": "Right Eye Age",
+            "value": 41,
+            "tech_name": "right_eye_age",
+            "widget_meta": null,
+            "widget_type": "numeric",
+            "sub_metrics": []
+          },
+          {
+            "area_name": "face",
+            "name": "ITA score",
+            "value": 43,
+            "tech_name": "ita_score",
+            "widget_meta": null,
+            "widget_type": "ITA",
+            "sub_metrics": [
+              {
+                "name": "SkinTone L channel",
+                "value": 76,
+                "tech_name": "skintone_l_channel",
+                "widget_meta": null,
+                "widget_type": "numeric"
+              },
+              {
+                "name": "SkinTone a channel",
+                "value": 13,
+                "tech_name": "skintone_a_channel",
+                "widget_meta": null,
+                "widget_type": "numeric"
+              },
+              {
+                "name": "SkinTone b channel",
+                "value": 27,
+                "tech_name": "skintone_b_channel",
+                "widget_meta": null,
+                "widget_type": "numeric"
+              }
+            ]
+          },
+          {
+            "area_name": "forehead",
+            "name": "ITA score",
+            "value": 45,
+            "tech_name": "ita_score",
+            "widget_meta": null,
+            "widget_type": "ITA",
+            "sub_metrics": [
+              {
+                "name": "SkinTone L channel",
+                "value": 79,
+                "tech_name": "skintone_l_channel",
+                "widget_meta": null,
+                "widget_type": "numeric"
+              },
+              {
+                "name": "SkinTone a channel",
+                "value": 10,
+                "tech_name": "skintone_a_channel",
+                "widget_meta": null,
+                "widget_type": "numeric"
+              },
+              {
+                "name": "SkinTone b channel",
+                "value": 25,
+                "tech_name": "skintone_b_channel",
+                "widget_meta": null,
+                "widget_type": "numeric"
+              }
+            ]
+          },
+          {
+            "area_name": "right_cheek",
+            "name": "ITA score",
+            "value": 36,
+            "tech_name": "ita_score",
+            "widget_meta": null,
+            "widget_type": "ITA",
+            "sub_metrics": [
+              {
+                "name": "SkinTone L channel",
+                "value": 74,
+                "tech_name": "skintone_l_channel",
+                "widget_meta": null,
+                "widget_type": "numeric"
+              },
+              {
+                "name": "SkinTone a channel",
+                "value": 16,
+                "tech_name": "skintone_a_channel",
+                "widget_meta": null,
+                "widget_type": "numeric"
+              },
+              {
+                "name": "SkinTone b channel",
+                "value": 31,
+                "tech_name": "skintone_b_channel",
+                "widget_meta": null,
+                "widget_type": "numeric"
+              }
+            ]
+          },
+          {
+            "area_name": "left_cheek",
+            "name": "ITA score",
+            "value": 47,
+            "tech_name": "ita_score",
+            "widget_meta": null,
+            "widget_type": "ITA",
+            "sub_metrics": [
+              {
+                "name": "SkinTone L channel",
+                "value": 76,
+                "tech_name": "skintone_l_channel",
+                "widget_meta": null,
+                "widget_type": "numeric"
+              },
+              {
+                "name": "SkinTone a channel",
+                "value": 14,
+                "tech_name": "skintone_a_channel",
+                "widget_meta": null,
+                "widget_type": "numeric"
+              },
+              {
+                "name": "SkinTone b channel",
+                "value": 24,
+                "tech_name": "skintone_b_channel",
+                "widget_meta": null,
+                "widget_type": "numeric"
+              }
+            ]
+          },
+          {
+            "area_name": "face",
+            "name": "Image Quality Score",
+            "value": 53,
+            "tech_name": "image_quality_score",
+            "widget_meta": null,
+            "widget_type": "bad_good_line",
+            "sub_metrics": [
+              {
+                "name": "Detection",
+                "value": 100,
+                "tech_name": "detection",
+                "widget_meta": null,
+                "widget_type": "bad_good_line"
+              },
+              {
+                "name": "Head_rotation",
+                "value": 99,
+                "tech_name": "head_rotation",
+                "widget_meta": null,
+                "widget_type": "bad_good_line"
+              },
+              {
+                "name": "Resolution",
+                "value": 28,
+                "tech_name": "resolution",
+                "widget_meta": null,
+                "widget_type": "bad_good_line"
+              },
+              {
+                "name": "Focus",
+                "value": 91,
+                "tech_name": "focus",
+                "widget_meta": null,
+                "widget_type": "bad_good_line"
+              },
+              {
+                "name": "Lightness",
+                "value": 30,
+                "tech_name": "lightness",
+                "widget_meta": null,
+                "widget_type": "bad_good_line"
+              },
+              {
+                "name": "Colortone",
+                "value": 96,
+                "tech_name": "colortone",
+                "widget_meta": null,
+                "widget_type": "bad_good_line"
+              }
+            ]
+          },
+          {
+            "area_name": "face",
+            "name": "Translucency score",
+            "value": 55,
+            "tech_name": "translucency_score",
+            "widget_meta": null,
+            "widget_type": "bad_good_line",
+            "sub_metrics": []
+          },
+          {
+            "area_name": "forehead",
+            "name": "Translucency score",
+            "value": 62,
+            "tech_name": "translucency_score",
+            "widget_meta": null,
+            "widget_type": "bad_good_line",
+            "sub_metrics": []
+          },
+          {
+            "area_name": "right_cheek",
+            "name": "Translucency score",
+            "value": 68,
+            "tech_name": "translucency_score",
+            "widget_meta": null,
+            "widget_type": "bad_good_line",
+            "sub_metrics": []
+          },
+          {
+            "area_name": "left_cheek",
+            "name": "Translucency score",
+            "value": 37,
+            "tech_name": "translucency_score",
+            "widget_meta": null,
+            "widget_type": "bad_good_line",
+            "sub_metrics": []
+          },
+          {
+            "area_name": "face",
+            "name": "Hydration Score",
+            "value": 0,
+            "tech_name": "hydration_score",
+            "widget_meta": null,
+            "widget_type": "bad_good_line",
+            "sub_metrics": [
+              {
+                "name": "Hydration Level",
+                "value": "Severe Dehydration",
+                "tech_name": "hydration_level",
+                "widget_meta": null,
+                "widget_type": "category"
+              }
+            ]
+          },
+          {
+            "area_name": "face",
+            "name": "Lines Score",
+            "value": 92,
+            "tech_name": "lines_score",
+            "widget_meta": null,
+            "widget_type": "bad_good_line",
+            "sub_metrics": [
+              {
+                "name": "Sagging Score",
+                "value": 88,
+                "tech_name": "sagging_score",
+                "widget_meta": null,
+                "widget_type": "bad_good_line"
+              },
+              {
+                "name": "Jowls Grade",
+                "value": 2,
+                "tech_name": "jowls_grade",
+                "widget_meta": null,
+                "widget_type": "numeric"
+              }
+            ]
+          },
+          {
+            "area_name": "forehead",
+            "name": "Lines Score",
+            "value": 99,
+            "tech_name": "lines_score",
+            "widget_meta": null,
+            "widget_type": "bad_good_line",
+            "sub_metrics": []
+          },
+          {
+            "area_name": "right_eye_corner",
+            "name": "Lines Score",
+            "value": 87,
+            "tech_name": "lines_score",
+            "widget_meta": null,
+            "widget_type": "bad_good_line",
+            "sub_metrics": []
+          },
+          {
+            "area_name": "left_eye_corner",
+            "name": "Lines Score",
+            "value": 91,
+            "tech_name": "lines_score",
+            "widget_meta": null,
+            "widget_type": "bad_good_line",
+            "sub_metrics": []
+          },
+          {
+            "area_name": "right_eye_area",
+            "name": "Lines Score",
+            "value": 87,
+            "tech_name": "lines_score",
+            "widget_meta": null,
+            "widget_type": "bad_good_line",
+            "sub_metrics": []
+          },
+          {
+            "area_name": "left_eye_area",
+            "name": "Lines Score",
+            "value": 91,
+            "tech_name": "lines_score",
+            "widget_meta": null,
+            "widget_type": "bad_good_line",
+            "sub_metrics": []
+          },
+          {
+            "area_name": "right_cheek",
+            "name": "Lines Score",
+            "value": 96,
+            "tech_name": "lines_score",
+            "widget_meta": null,
+            "widget_type": "bad_good_line",
+            "sub_metrics": []
+          },
+          {
+            "area_name": "left_cheek",
+            "name": "Lines Score",
+            "value": 96,
+            "tech_name": "lines_score",
+            "widget_meta": null,
+            "widget_type": "bad_good_line",
+            "sub_metrics": []
+          }
+        ],
+        "image_meta": null,
+        "subject_meta": {}
+      }
+    ],
+    "maskedData": [
+      [
+        {
+          "id": "e36b3b5a-47a3-4e4e-87f9-f69bb1ce923f",
+          "result": {
+            "image_type": "selfie",
+            "area_results": [
+              {
+                "area_name": "face",
+                "main_metric": {
+                  "name": "Translucency score",
+                  "units": null,
+                  "value": 55,
+                  "tech_name": "translucency_score",
+                  "widget_meta": null,
+                  "widget_type": "bad_good_line"
+                },
+                "sub_metrics": []
+              },
+              {
+                "area_name": "forehead",
+                "main_metric": {
+                  "name": "Translucency score",
+                  "units": null,
+                  "value": 62,
+                  "tech_name": "translucency_score",
+                  "widget_meta": null,
+                  "widget_type": "bad_good_line"
+                },
+                "sub_metrics": []
+              },
+              {
+                "area_name": "right_cheek",
+                "main_metric": {
+                  "name": "Translucency score",
+                  "units": null,
+                  "value": 68,
+                  "tech_name": "translucency_score",
+                  "widget_meta": null,
+                  "widget_type": "bad_good_line"
+                },
+                "sub_metrics": []
+              },
+              {
+                "area_name": "left_cheek",
+                "main_metric": {
+                  "name": "Translucency score",
+                  "units": null,
+                  "value": 37,
+                  "tech_name": "translucency_score",
+                  "widget_meta": null,
+                  "widget_type": "bad_good_line"
+                },
+                "sub_metrics": []
+              }
+            ],
+            "algorithm_tech_name": "translucency"
+          },
+          "is_ok": true,
+          "image_id": "77662d16-6b50-40a2-9fc6-8fb458f548cc",
+          "algorithm_version_id": 50,
+          "creation_time": "2023-03-14 10:48:37",
+          "application_id": "8b5b3acc-480b-4412-8d2c-ebe6ab4384d7",
+          "application_name": "Face Skin Metrics 2.0",
+          "application_description": "Use this application to analyze the skin’s overall condition.<br>This app will check the selfie’s image quality and assess visual skin features, such as:<ol>    <li>perceived age</li>    <li>eye age</li>    <li>skin tone</li>    <li>eye bags</li>    <li>uniformness</li>    <li>redness</li>    <li>wrinkles (deprecated)</li>    <li>pores</li>    <li>sagging (deprecated)</li>    <li>acne</li>    <li>pigmentation</li>    <li>translucency</li>    <li>hydration</li>    <li>facial landmarks</li>    <li>lines</li></ol>For the calculated metrics, the application will produce analytics, which is available in the interface. You can use this application to compare subjects, track skin dynamics over time, and get skin metric reports.",
+          "application_run_id": "1796b7bf-58be-49f0-be95-c0e656bdce25",
+          "image_type": "selfie",
+          "algorithm_family_tech_name": "selfie_v2.translucency"
+        },
+        {
+          "id": "0d1f88ee-7b8a-4cc0-97ad-66d10dd7d952",
+          "result": {
+            "image_type": "selfie",
+            "area_results": [
+              {
+                "area_name": "face",
+                "main_metric": {
+                  "name": "Uniformness Score",
+                  "value": 13,
+                  "tech_name": "uniformness_score",
+                  "widget_meta": null,
+                  "widget_type": "bad_good_line"
+                },
+                "sub_metrics": null
+              },
+              {
+                "area_name": "forehead_n_bridge",
+                "main_metric": {
+                  "name": "Uniformness Score",
+                  "value": 40,
+                  "tech_name": "uniformness_score",
+                  "widget_meta": null,
+                  "widget_type": "bad_good_line"
+                },
+                "sub_metrics": null
+              },
+              {
+                "area_name": "right_cheek",
+                "main_metric": {
+                  "name": "Uniformness Score",
+                  "value": 0,
+                  "tech_name": "uniformness_score",
+                  "widget_meta": null,
+                  "widget_type": "bad_good_line"
+                },
+                "sub_metrics": null
+              },
+              {
+                "area_name": "left_cheek",
+                "main_metric": {
+                  "name": "Uniformness Score",
+                  "value": 0,
+                  "tech_name": "uniformness_score",
+                  "widget_meta": null,
+                  "widget_type": "bad_good_line"
+                },
+                "sub_metrics": null
+              }
+            ],
+            "algorithm_tech_name": "uniformness"
+          },
+          "is_ok": true,
+          "image_id": "77662d16-6b50-40a2-9fc6-8fb458f548cc",
+          "algorithm_version_id": 32,
+          "creation_time": "2023-03-14 10:48:37",
+          "application_id": "8b5b3acc-480b-4412-8d2c-ebe6ab4384d7",
+          "application_name": "Face Skin Metrics 2.0",
+          "application_description": "Use this application to analyze the skin’s overall condition.<br>This app will check the selfie’s image quality and assess visual skin features, such as:<ol>    <li>perceived age</li>    <li>eye age</li>    <li>skin tone</li>    <li>eye bags</li>    <li>uniformness</li>    <li>redness</li>    <li>wrinkles (deprecated)</li>    <li>pores</li>    <li>sagging (deprecated)</li>    <li>acne</li>    <li>pigmentation</li>    <li>translucency</li>    <li>hydration</li>    <li>facial landmarks</li>    <li>lines</li></ol>For the calculated metrics, the application will produce analytics, which is available in the interface. You can use this application to compare subjects, track skin dynamics over time, and get skin metric reports.",
+          "application_run_id": "1796b7bf-58be-49f0-be95-c0e656bdce25",
+          "image_type": "selfie",
+          "algorithm_family_tech_name": "selfie_v2.uniformness"
+        },
+        {
+          "id": "c976a130-92ba-4155-b7fe-0d8fe834856f",
+          "result": {
+            "image_type": "selfie",
+            "area_results": [
+              {
+                "area_name": "face",
+                "main_metric": {
+                  "name": "Hydration Score",
+                  "units": null,
+                  "value": 0,
+                  "tech_name": "hydration_score",
+                  "widget_meta": null,
+                  "widget_type": "bad_good_line"
+                },
+                "sub_metrics": [
+                  {
+                    "name": "Hydration Level",
+                    "units": null,
+                    "value": "Severe Dehydration",
+                    "tech_name": "hydration_level",
+                    "widget_meta": null,
+                    "widget_type": "category"
+                  }
+                ]
+              }
+            ],
+            "algorithm_tech_name": "Hydration"
+          
+          },
+          "is_ok": true,
+          "image_id": "77662d16-6b50-40a2-9fc6-8fb458f548cc",
+          "algorithm_version_id": 51,
+          "creation_time": "2023-03-14 10:48:37",
+          "application_id": "8b5b3acc-480b-4412-8d2c-ebe6ab4384d7",
+          "application_name": "Face Skin Metrics 2.0",
+          "application_description": "Use this application to analyze the skin’s overall condition.<br>This app will check the selfie’s image quality and assess visual skin features, such as:<ol>    <li>perceived age</li>    <li>eye age</li>    <li>skin tone</li>    <li>eye bags</li>    <li>uniformness</li>    <li>redness</li>    <li>wrinkles (deprecated)</li>    <li>pores</li>    <li>sagging (deprecated)</li>    <li>acne</li>    <li>pigmentation</li>    <li>translucency</li>    <li>hydration</li>    <li>facial landmarks</li>    <li>lines</li></ol>For the calculated metrics, the application will produce analytics, which is available in the interface. You can use this application to compare subjects, track skin dynamics over time, and get skin metric reports.",
+          "application_run_id": "1796b7bf-58be-49f0-be95-c0e656bdce25",
+          "image_type": "selfie",
+          "algorithm_family_tech_name": "selfie_v2.hydration"
+        },
+        {
+          "id": "84ae12d6-6f52-48aa-aa83-46ca6d161e41",
+          "result": {
+            "image_type": "selfie",
+            "area_results": [
+              {
+                "area_name": "face",
+                "main_metric": {
+                  "name": "Lines Score",
+                  "units": null,
+                  "value": 92,
+                  "tech_name": "lines_score",
+                  "widget_meta": null,
+                  "widget_type": "bad_good_line"
+                },
+                "sub_metrics": [
+                  {
+                    "name": "Sagging Score",
+                    "units": null,
+                    "value": 88,
+                    "tech_name": "sagging_score",
+                    "widget_meta": null,
+                    "widget_type": "bad_good_line"
+                  },
+                  {
+                    "name": "Jowls Grade",
+                    "units": null,
+                    "value": 2,
+                    "tech_name": "jowls_grade",
+                    "widget_meta": null,
+                    "widget_type": "numeric"
+                  }
+                ]
+              },
+              {
+                "area_name": "forehead",
+                "main_metric": {
+                  "name": "Lines Score",
+                  "units": null,
+                  "value": 99,
+                  "tech_name": "lines_score",
+                  "widget_meta": null,
+                  "widget_type": "bad_good_line"
+                },
+                "sub_metrics": []
+              },
+              {
+                "area_name": "right_eye_corner",
+                "main_metric": {
+                  "name": "Lines Score",
+                  "units": null,
+                  "value": 87,
+                  "tech_name": "lines_score",
+                  "widget_meta": null,
+                  "widget_type": "bad_good_line"
+                },
+                "sub_metrics": []
+              },
+              {
+                "area_name": "left_eye_corner",
+                "main_metric": {
+                  "name": "Lines Score",
+                  "units": null,
+                  "value": 91,
+                  "tech_name": "lines_score",
+                  "widget_meta": null,
+                  "widget_type": "bad_good_line"
+                },
+                "sub_metrics": []
+              },
+              {
+                "area_name": "right_eye_area",
+                "main_metric": {
+                  "name": "Lines Score",
+                  "units": null,
+                  "value": 87,
+                  "tech_name": "lines_score",
+                  "widget_meta": null,
+                  "widget_type": "bad_good_line"
+                },
+                "sub_metrics": []
+              },
+              {
+                "area_name": "left_eye_area",
+                "main_metric": {
+                  "name": "Lines Score",
+                  "units": null,
+                  "value": 91,
+                  "tech_name": "lines_score",
+                  "widget_meta": null,
+                  "widget_type": "bad_good_line"
+                },
+                "sub_metrics": []
+              },
+              {
+                "area_name": "right_cheek",
+                "main_metric": {
+                  "name": "Lines Score",
+                  "units": null,
+                  "value": 96,
+                  "tech_name": "lines_score",
+                  "widget_meta": null,
+                  "widget_type": "bad_good_line"
+                },
+                "sub_metrics": []
+              },
+              {
+                "area_name": "left_cheek",
+                "main_metric": {
+                  "name": "Lines Score",
+                  "units": null,
+                  "value": 96,
+                  "tech_name": "lines_score",
+                  "widget_meta": null,
+                  "widget_type": "bad_good_line"
+                },
+                "sub_metrics": []
+              }
+            ],
+            "algorithm_tech_name": "lines"
+          
+          },
+          "is_ok": true,
+          "image_id": "77662d16-6b50-40a2-9fc6-8fb458f548cc",
+          "algorithm_version_id": 69,
+          "creation_time": "2023-03-14 10:48:37",
+          "application_id": "8b5b3acc-480b-4412-8d2c-ebe6ab4384d7",
+          "application_name": "Face Skin Metrics 2.0",
+          "application_description": "Use this application to analyze the skin’s overall condition.<br>This app will check the selfie’s image quality and assess visual skin features, such as:<ol>    <li>perceived age</li>    <li>eye age</li>    <li>skin tone</li>    <li>eye bags</li>    <li>uniformness</li>    <li>redness</li>    <li>wrinkles (deprecated)</li>    <li>pores</li>    <li>sagging (deprecated)</li>    <li>acne</li>    <li>pigmentation</li>    <li>translucency</li>    <li>hydration</li>    <li>facial landmarks</li>    <li>lines</li></ol>For the calculated metrics, the application will produce analytics, which is available in the interface. You can use this application to compare subjects, track skin dynamics over time, and get skin metric reports.",
+          "application_run_id": "1796b7bf-58be-49f0-be95-c0e656bdce25",
+          "image_type": "selfie",
+          "algorithm_family_tech_name": "selfie_v2.lines"
+        },
+        {
+          "id": "45d65a11-50f6-4753-a13e-8997a10698b4",
+          "result": {
+            "image_type": "selfie",
+            "area_results": [
+              {
+                "area_name": "face",
+                "main_metric": {
+                  "name": "Redness Score",
+                  "units": null,
+                  "value": 54,
+                  "tech_name": "redness_score",
+                  "widget_meta": null,
+                  "widget_type": "bad_good_line"
+                },
+                "sub_metrics": [
+                  {
+                    "name": "Redness Local Score",
+                    "units": null,
+                    "value": 40,
+                    "tech_name": "redness_local_score",
+                    "widget_meta": null,
+                    "widget_type": "bad_good_line"
+                  },
+                  {
+                    "name": "Redness Global Score",
+                    "units": null,
+                    "value": 66,
+                    "tech_name": "redness_global_score",
+                    "widget_meta": null,
+                    "widget_type": "bad_good_line"
+                  }
+                ]
+              },
+              {
+                "area_name": "nose",
+                "main_metric": {
+                  "name": "Redness Score",
+                  "units": null,
+                  "value": 41,
+                  "tech_name": "redness_score",
+                  "widget_meta": null,
+                  "widget_type": "bad_good_line"
+                },
+                "sub_metrics": [
+                  {
+                    "name": "Redness Local Score",
+                    "units": null,
+                    "value": 11,
+                    "tech_name": "redness_local_score",
+                    "widget_meta": null,
+                    "widget_type": "bad_good_line"
+                  },
+                  {
+                    "name": "Redness Global Score",
+                    "units": null,
+                    "value": 68,
+                    "tech_name": "redness_global_score",
+                    "widget_meta": null,
+                    "widget_type": "bad_good_line"
+                  }
+                ]
+              },
+              {
+                "area_name": "forehead",
+                "main_metric": {
+                  "name": "Redness Score",
+                  "units": null,
+                  "value": 85,
+                  "tech_name": "redness_score",
+                  "widget_meta": null,
+                  "widget_type": "bad_good_line"
+                },
+                "sub_metrics": [
+                  {
+                    "name": "Redness Local Score",
+                    "units": null,
+                    "value": 82,
+                    "tech_name": "redness_local_score",
+                    "widget_meta": null,
+                    "widget_type": "bad_good_line"
+                  },
+                  {
+                    "name": "Redness Global Score",
+                    "units": null,
+                    "value": 86,
+                    "tech_name": "redness_global_score",
+                    "widget_meta": null,
+                    "widget_type": "bad_good_line"
+                  }
+                ]
+              },
+              {
+                "area_name": "right_cheek",
+                "main_metric": {
+                  "name": "Redness Score",
+                  "units": null,
+                  "value": 29,
+                  "tech_name": "redness_score",
+                  "widget_meta": null,
+                  "widget_type": "bad_good_line"
+                },
+                "sub_metrics": [
+                  {
+                    "name": "Redness Local Score",
+                    "units": null,
+                    "value": 7,
+                    "tech_name": "redness_local_score",
+                    "widget_meta": null,
+                    "widget_type": "bad_good_line"
+                  },
+                  {
+                    "name": "Redness Global Score",
+                    "units": null,
+                    "value": 50,
+                    "tech_name": "redness_global_score",
+                    "widget_meta": null,
+                    "widget_type": "bad_good_line"
+                  }
+                ]
+              },
+              {
+                "area_name": "left_cheek",
+                "main_metric": {
+                  "name": "Redness Score",
+                  "units": null,
+                  "value": 53,
+                  "tech_name": "redness_score",
+                  "widget_meta": null,
+                  "widget_type": "bad_good_line"
+                },
+                "sub_metrics": [
+                  {
+                    "name": "Redness Local Score",
+                    "units": null,
+                    "value": 35,
+                    "tech_name": "redness_local_score",
+                    "widget_meta": null,
+                    "widget_type": "bad_good_line"
+                  },
+                  {
+                    "name": "Redness Global Score",
+                    "units": null,
+                    "value": 70,
+                    "tech_name": "redness_global_score",
+                    "widget_meta": null,
+                    "widget_type": "bad_good_line"
+                  }
+                ]
+              },
+              {
+                "area_name": "chin",
+                "main_metric": {
+                  "name": "Redness Score",
+                  "units": null,
+                  "value": 69,
+                  "tech_name": "redness_score",
+                  "widget_meta": null,
+                  "widget_type": "bad_good_line"
+                },
+                "sub_metrics": [
+                  {
+                    "name": "Redness Local Score",
+                    "units": null,
+                    "value": 78,
+                    "tech_name": "redness_local_score",
+                    "widget_meta": null,
+                    "widget_type": "bad_good_line"
+                  },
+                  {
+                    "name": "Redness Global Score",
+                    "units": null,
+                    "value": 59,
+                    "tech_name": "redness_global_score",
+                    "widget_meta": null,
+                    "widget_type": "bad_good_line"
+                  }
+                ]
+              }
+            ],
+            "algorithm_tech_name": "redness"
+          },
+          "is_ok": true,
+          "image_id": "77662d16-6b50-40a2-9fc6-8fb458f548cc",
+          "algorithm_version_id": 30,
+          "creation_time": "2023-03-14 10:48:37",
+          "application_id": "8b5b3acc-480b-4412-8d2c-ebe6ab4384d7",
+          "application_name": "Face Skin Metrics 2.0",
+          "application_description": "Use this application to analyze the skin’s overall condition.<br>This app will check the selfie’s image quality and assess visual skin features, such as:<ol>    <li>perceived age</li>    <li>eye age</li>    <li>skin tone</li>    <li>eye bags</li>    <li>uniformness</li>    <li>redness</li>    <li>wrinkles (deprecated)</li>    <li>pores</li>    <li>sagging (deprecated)</li>    <li>acne</li>    <li>pigmentation</li>    <li>translucency</li>    <li>hydration</li>    <li>facial landmarks</li>    <li>lines</li></ol>For the calculated metrics, the application will produce analytics, which is available in the interface. You can use this application to compare subjects, track skin dynamics over time, and get skin metric reports.",
+          "application_run_id": "1796b7bf-58be-49f0-be95-c0e656bdce25",
+          "image_type": "selfie",
+          "algorithm_family_tech_name": "selfie_v2.redness"
+        },
+        {
+          "id": "c23ac94f-0052-4359-b5c1-f061270fb088",
+          "result": {
+            "image_type": "selfie",
+            "area_results": [
+              {
+                "area_name": "face",
+                "main_metric": {
+                  "name": "ITA score",
+                  "units": null,
+                  "value": 43,
+                  "tech_name": "ita_score",
+                  "widget_meta": null,
+                  "widget_type": "ITA"
+                },
+                "sub_metrics": [
+                  {
+                    "name": "SkinTone L channel",
+                    "units": null,
+                    "value": 76,
+                    "tech_name": "skintone_l_channel",
+                    "widget_meta": null,
+                    "widget_type": "numeric"
+                  },
+                  {
+                    "name": "SkinTone a channel",
+                    "units": null,
+                    "value": 13,
+                    "tech_name": "skintone_a_channel",
+                    "widget_meta": null,
+                    "widget_type": "numeric"
+                  },
+                  {
+                    "name": "SkinTone b channel",
+                    "units": null,
+                    "value": 27,
+                    "tech_name": "skintone_b_channel",
+                    "widget_meta": null,
+                    "widget_type": "numeric"
+                  }
+                ]
+              },
+              {
+                "area_name": "forehead",
+                "main_metric": {
+                  "name": "ITA score",
+                  "units": null,
+                  "value": 45,
+                  "tech_name": "ita_score",
+                  "widget_meta": null,
+                  "widget_type": "ITA"
+                },
+                "sub_metrics": [
+                  {
+                    "name": "SkinTone L channel",
+                    "units": null,
+                    "value": 79,
+                    "tech_name": "skintone_l_channel",
+                    "widget_meta": null,
+                    "widget_type": "numeric"
+                  },
+                  {
+                    "name": "SkinTone a channel",
+                    "units": null,
+                    "value": 10,
+                    "tech_name": "skintone_a_channel",
+                    "widget_meta": null,
+                    "widget_type": "numeric"
+                  },
+                  {
+                    "name": "SkinTone b channel",
+                    "units": null,
+                    "value": 25,
+                    "tech_name": "skintone_b_channel",
+                    "widget_meta": null,
+                    "widget_type": "numeric"
+                  }
+                ]
+              },
+              {
+                "area_name": "right_cheek",
+                "main_metric": {
+                  "name": "ITA score",
+                  "units": null,
+                  "value": 36,
+                  "tech_name": "ita_score",
+                  "widget_meta": null,
+                  "widget_type": "ITA"
+                },
+                "sub_metrics": [
+                  {
+                    "name": "SkinTone L channel",
+                    "units": null,
+                    "value": 74,
+                    "tech_name": "skintone_l_channel",
+                    "widget_meta": null,
+                    "widget_type": "numeric"
+                  },
+                  {
+                    "name": "SkinTone a channel",
+                    "units": null,
+                    "value": 16,
+                    "tech_name": "skintone_a_channel",
+                    "widget_meta": null,
+                    "widget_type": "numeric"
+                  },
+                  {
+                    "name": "SkinTone b channel",
+                    "units": null,
+                    "value": 31,
+                    "tech_name": "skintone_b_channel",
+                    "widget_meta": null,
+                    "widget_type": "numeric"
+                  }
+                ]
+              },
+              {
+                "area_name": "left_cheek",
+                "main_metric": {
+                  "name": "ITA score",
+                  "units": null,
+                  "value": 47,
+                  "tech_name": "ita_score",
+                  "widget_meta": null,
+                  "widget_type": "ITA"
+                },
+                "sub_metrics": [
+                  {
+                    "name": "SkinTone L channel",
+                    "units": null,
+                    "value": 76,
+                    "tech_name": "skintone_l_channel",
+                    "widget_meta": null,
+                    "widget_type": "numeric"
+                  },
+                  {
+                    "name": "SkinTone a channel",
+                    "units": null,
+                    "value": 14,
+                    "tech_name": "skintone_a_channel",
+                    "widget_meta": null,
+                    "widget_type": "numeric"
+                  },
+                  {
+                    "name": "SkinTone b channel",
+                    "units": null,
+                    "value": 24,
+                    "tech_name": "skintone_b_channel",
+                    "widget_meta": null,
+                    "widget_type": "numeric"
+                  }
+                ]
+              }
+            ],
+            "algorithm_tech_name": "skin_tone"
+          },
+          "is_ok": true,
+          "image_id": "77662d16-6b50-40a2-9fc6-8fb458f548cc",
+          "algorithm_version_id": 42,
+          "creation_time": "2023-03-14 10:48:37",
+          "application_id": "8b5b3acc-480b-4412-8d2c-ebe6ab4384d7",
+          "application_name": "Face Skin Metrics 2.0",
+          "application_description": "Use this application to analyze the skin’s overall condition.<br>This app will check the selfie’s image quality and assess visual skin features, such as:<ol>    <li>perceived age</li>    <li>eye age</li>    <li>skin tone</li>    <li>eye bags</li>    <li>uniformness</li>    <li>redness</li>    <li>wrinkles (deprecated)</li>    <li>pores</li>    <li>sagging (deprecated)</li>    <li>acne</li>    <li>pigmentation</li>    <li>translucency</li>    <li>hydration</li>    <li>facial landmarks</li>    <li>lines</li></ol>For the calculated metrics, the application will produce analytics, which is available in the interface. You can use this application to compare subjects, track skin dynamics over time, and get skin metric reports.",
+          "application_run_id": "1796b7bf-58be-49f0-be95-c0e656bdce25",
+          "image_type": "selfie",
+          "algorithm_family_tech_name": "selfie_v2.skin_tone"
+        },
+        {
+          "id": "9cad1547-5f93-4582-b0d0-4b1e62048c95",
+          "result": {
+            "feedback": {
+              "overlay": "Low quality image",
+              "tooltip": {
+                "warn": [],
+                "negative": [
+                  "Unacceptable face resolution",
+                  "Unacceptable face illumination"
+                ],
+                "positive": []
+              }
+            },
+            "image_type": "selfie",
+            "area_results": [
+              {
+                "area_name": "face",
+                "main_metric": {
+                  "name": "Image Quality Score",
+                  "value": 53,
+                  "tech_name": "image_quality_score",
+                  "widget_meta": null,
+                  "widget_type": "bad_good_line"
+                },
+                "sub_metrics": {
+                  "focus": 91,
+                  "colortone": 96,
+                  "detection": 100,
+                  "lightness": 30,
+                  "resolution": 28,
+                  "head_rotation": 99
+                },
+                "debug_metrics": {
+                  "yaw_angle": -1,
+                  "pitch_angle": -2,
+                  "eye_width_px": 79,
+                  "eye_height_px": 19,
+                  "face_width_px": 369,
+                  "raw_sharpness": 545.96,
+                  "detection_flag": true,
+                  "face_height_px": 341,
+                  "full_face_flag": true,
+                  "nose_height_px": 76,
+                  "left_eye_openness": 0.23,
+                  "left_eye_a_channel": 3.5,
+                  "left_eye_b_channel": 6.5,
+                  "left_eye_l_channel": 67.22,
+                  "right_eye_openness": 0.25,
+                  "right_eye_a_channel": 5,
+                  "right_eye_b_channel": 6,
+                  "right_eye_l_channel": 55.56,
+                  "eye_difference_score": 100,
+                  "eye_exposition_score": 69,
+                  "skin_overlap_forehead": 90,
+                  "skin_overlap_left_cheek": 95,
+                  "left_eye_colortone_score": 95,
+                  "skin_overlap_right_cheek": 95,
+                  "right_eye_colortone_score": 97,
+                  "skin_uniformness_a_channel": 7.61,
+                  "skin_uniformness_b_channel": 4.48,
+                  "skin_uniformness_l_channel": 20.67,
+                  "skin_overlap_left_eye_inner": 100,
+                  "skin_overlap_right_eye_inner": 98
+                }
+              }
+            ],
+            "algorithm_tech_name": "quality"
+          },
+          "is_ok": true,
+          "image_id": "77662d16-6b50-40a2-9fc6-8fb458f548cc",
+          "algorithm_version_id": 43,
+          "creation_time": "2023-03-14 10:48:37",
+          "application_id": "8b5b3acc-480b-4412-8d2c-ebe6ab4384d7",
+          "application_name": "Face Skin Metrics 2.0",
+          "application_description": "Use this application to analyze the skin’s overall condition.<br>This app will check the selfie’s image quality and assess visual skin features, such as:<ol>    <li>perceived age</li>    <li>eye age</li>    <li>skin tone</li>    <li>eye bags</li>    <li>uniformness</li>    <li>redness</li>    <li>wrinkles (deprecated)</li>    <li>pores</li>    <li>sagging (deprecated)</li>    <li>acne</li>    <li>pigmentation</li>    <li>translucency</li>    <li>hydration</li>    <li>facial landmarks</li>    <li>lines</li></ol>For the calculated metrics, the application will produce analytics, which is available in the interface. You can use this application to compare subjects, track skin dynamics over time, and get skin metric reports.",
+          "application_run_id": "1796b7bf-58be-49f0-be95-c0e656bdce25",
+          "image_type": "selfie",
+          "algorithm_family_tech_name": "selfie_v2.quality"
+        },
+        {
+          "id": "c25e1980-20fd-4c0f-98d1-9066cd38214b",
+          "result": {
+            "image_type": "selfie",
+            "area_results": [
+              {
+                "area_name": "face",
+                "main_metric": {
+                  "name": "Eye Area Condition",
+                  "value": 63,
+                  "tech_name": "eye_area_condition",
+                  "widget_meta": null,
+                  "widget_type": "bad_good_line"
+                },
+                "sub_metrics": [
+                  {
+                    "name": "Dark Circle Score",
+                    "value": 58,
+                    "tech_name": "dark_circles_score",
+                    "widget_meta": null,
+                    "widget_type": "bad_good_line"
+                  },
+                  {
+                    "name": "Eye Bags Score",
+                    "value": 67,
+                    "tech_name": "eye_bags_score",
+                    "widget_meta": null,
+                    "widget_type": "bad_good_line"
+                  },
+                  {
+                    "name": "Lacrimal Grooves Score",
+                    "value": 73,
+                    "tech_name": "lacrimal_grooves_score",
+                    "widget_meta": null,
+                    "widget_type": "bad_good_line"
+                  }
+                ]
+              },
+              {
+                "area_name": "left_eye_area",
+                "main_metric": {
+                  "name": "Eye Area Condition",
+                  "value": 66,
+                  "tech_name": "eye_area_condition",
+                  "widget_meta": null,
+                  "widget_type": "bad_good_line"
+                },
+                "sub_metrics": [
+                  {
+                    "name": "Dark Circle Score",
+                    "value": 60,
+                    "tech_name": "dark_circles_score",
+                    "widget_meta": null,
+                    "widget_type": "bad_good_line"
+                  },
+                  {
+                    "name": "Eye Bags Score",
+                    "value": 73,
+                    "tech_name": "eye_bags_score",
+                    "widget_meta": null,
+                    "widget_type": "bad_good_line"
+                  },
+                  {
+                    "name": "Lacrimal Grooves Score",
+                    "value": 73,
+                    "tech_name": "lacrimal_grooves_score",
+                    "widget_meta": null,
+                    "widget_type": "bad_good_line"
+                  }
+                ]
+              },
+              {
+                "area_name": "right_eye_area",
+                "main_metric": {
+                  "name": "Eye Area Condition",
+                  "value": 61,
+                  "tech_name": "eye_area_condition",
+                  "widget_meta": null,
+                  "widget_type": "bad_good_line"
+                },
+                "sub_metrics": [
+                  {
+                    "name": "Dark Circle Score",
+                    "value": 56,
+                    "tech_name": "dark_circles_score",
+                    "widget_meta": null,
+                    "widget_type": "bad_good_line"
+                  },
+                  {
+                    "name": "Eye Bags Score",
+                    "value": 62,
+                    "tech_name": "eye_bags_score",
+                    "widget_meta": null,
+                    "widget_type": "bad_good_line"
+                  },
+                  {
+                    "name": "Lacrimal Grooves Score",
+                    "value": 73,
+                    "tech_name": "lacrimal_grooves_score",
+                    "widget_meta": null,
+                    "widget_type": "bad_good_line"
+                  }
+                ]
+              }
+            ],
+            "algorithm_tech_name": "eye_bags"
+          },
+          "is_ok": true,
+          "image_id": "77662d16-6b50-40a2-9fc6-8fb458f548cc",
+          "algorithm_version_id": 33,
+          "creation_time": "2023-03-14 10:48:37",
+          "application_id": "8b5b3acc-480b-4412-8d2c-ebe6ab4384d7",
+          "application_name": "Face Skin Metrics 2.0",
+          "application_description": "Use this application to analyze the skin’s overall condition.<br>This app will check the selfie’s image quality and assess visual skin features, such as:<ol>    <li>perceived age</li>    <li>eye age</li>    <li>skin tone</li>    <li>eye bags</li>    <li>uniformness</li>    <li>redness</li>    <li>wrinkles (deprecated)</li>    <li>pores</li>    <li>sagging (deprecated)</li>    <li>acne</li>    <li>pigmentation</li>    <li>translucency</li>    <li>hydration</li>    <li>facial landmarks</li>    <li>lines</li></ol>For the calculated metrics, the application will produce analytics, which is available in the interface. You can use this application to compare subjects, track skin dynamics over time, and get skin metric reports.",
+          "application_run_id": "1796b7bf-58be-49f0-be95-c0e656bdce25",
+          "image_type": "selfie",
+          "algorithm_family_tech_name": "selfie_v2.eye_bags"
+        },
+        {
+          "id": "ff2b409c-f053-467f-9456-44eaba1e5e49",
+          "result": {
+            "image_type": "selfie",
+            "area_results": null,
+            "algorithm_tech_name": "front_face_areas"
+          },
+          "is_ok": true,
+          "image_id": "77662d16-6b50-40a2-9fc6-8fb458f548cc",
+          "algorithm_version_id": 38,
+          "creation_time": "2023-03-14 10:48:36",
+          "application_id": "8b5b3acc-480b-4412-8d2c-ebe6ab4384d7",
+          "application_name": "Face Skin Metrics 2.0",
+          "application_description": "Use this application to analyze the skin’s overall condition.<br>This app will check the selfie’s image quality and assess visual skin features, such as:<ol>    <li>perceived age</li>    <li>eye age</li>    <li>skin tone</li>    <li>eye bags</li>    <li>uniformness</li>    <li>redness</li>    <li>wrinkles (deprecated)</li>    <li>pores</li>    <li>sagging (deprecated)</li>    <li>acne</li>    <li>pigmentation</li>    <li>translucency</li>    <li>hydration</li>    <li>facial landmarks</li>    <li>lines</li></ol>For the calculated metrics, the application will produce analytics, which is available in the interface. You can use this application to compare subjects, track skin dynamics over time, and get skin metric reports.",
+          "application_run_id": "1796b7bf-58be-49f0-be95-c0e656bdce25",
+          "image_type": "selfie",
+          "algorithm_family_tech_name": "selfie_v2.front_face_areas"
+        },
+        {
+          "id": "c3b2ef4e-51a1-47db-88eb-f49070e06de4",
+          "result": {
+            "image_type": "selfie",
+            "area_results": [
+              {
+                "area_name": "face",
+                "main_metric": {
+                  "name": "Acne score",
+                  "units": null,
+                  "value": 97,
+                  "tech_name": "acne_score",
+                  "widget_meta": null,
+                  "widget_type": "bad_good_line"
+                },
+                "sub_metrics": [
+                  {
+                    "name": "Number of acne regions",
+                    "units": null,
+                    "value": 1,
+                    "tech_name": "number_of_regions",
+                    "widget_meta": null,
+                    "widget_type": "numeric"
+                  },
+                  {
+                    "name": "Acne regions density score",
+                    "units": null,
+                    "value": 0,
+                    "tech_name": "density_score",
+                    "widget_meta": null,
+                    "widget_type": "density"
+                  },
+                  {
+                    "name": "Average intensity of acne regions",
+                    "units": null,
+                    "value": 25,
+                    "tech_name": "average_intensity_score",
+                    "widget_meta": null,
+                    "widget_type": "density"
+                  }
+                ]
+              },
+              {
+                "area_name": "nose",
+                "main_metric": {
+                  "name": "Acne score",
+                  "units": null,
+                  "value": 100,
+                  "tech_name": "acne_score",
+                  "widget_meta": null,
+                  "widget_type": "bad_good_line"
+                },
+                "sub_metrics": [
+                  {
+                    "name": "Number of acne regions",
+                    "units": null,
+                    "value": 0,
+                    "tech_name": "number_of_regions",
+                    "widget_meta": null,
+                    "widget_type": "numeric"
+                  },
+                  {
+                    "name": "Acne regions density score",
+                    "units": null,
+                    "value": 0,
+                    "tech_name": "density_score",
+                    "widget_meta": null,
+                    "widget_type": "density"
+                  },
+                  {
+                    "name": "Average intensity of acne regions",
+                    "units": null,
+                    "value": 0,
+                    "tech_name": "average_intensity_score",
+                    "widget_meta": null,
+                    "widget_type": "density"
+                  }
+                ]
+              },
+              {
+                "area_name": "left_cheek",
+                "main_metric": {
+                  "name": "Acne score",
+                  "units": null,
+                  "value": 100,
+                  "tech_name": "acne_score",
+                  "widget_meta": null,
+                  "widget_type": "bad_good_line"
+                },
+                "sub_metrics": [
+                  {
+                    "name": "Number of acne regions",
+                    "units": null,
+                    "value": 0,
+                    "tech_name": "number_of_regions",
+                    "widget_meta": null,
+                    "widget_type": "numeric"
+                  },
+                  {
+                    "name": "Acne regions density score",
+                    "units": null,
+                    "value": 0,
+                    "tech_name": "density_score",
+                    "widget_meta": null,
+                    "widget_type": "density"
+                  },
+                  {
+                    "name": "Average intensity of acne regions",
+                    "units": null,
+                    "value": 0,
+                    "tech_name": "average_intensity_score",
+                    "widget_meta": null,
+                    "widget_type": "density"
+                  }
+                ]
+              },
+              {
+                "area_name": "right_cheek",
+                "main_metric": {
+                  "name": "Acne score",
+                  "units": null,
+                  "value": 100,
+                  "tech_name": "acne_score",
+                  "widget_meta": null,
+                  "widget_type": "bad_good_line"
+                },
+                "sub_metrics": [
+                  {
+                    "name": "Number of acne regions",
+                    "units": null,
+                    "value": 0,
+                    "tech_name": "number_of_regions",
+                    "widget_meta": null,
+                    "widget_type": "numeric"
+                  },
+                  {
+                    "name": "Acne regions density score",
+                    "units": null,
+                    "value": 0,
+                    "tech_name": "density_score",
+                    "widget_meta": null,
+                    "widget_type": "density"
+                  },
+                  {
+                    "name": "Average intensity of acne regions",
+                    "units": null,
+                    "value": 0,
+                    "tech_name": "average_intensity_score",
+                    "widget_meta": null,
+                    "widget_type": "density"
+                  }
+                ]
+              },
+              {
+                "area_name": "forehead",
+                "main_metric": {
+                  "name": "Acne score",
+                  "units": null,
+                  "value": 91,
+                  "tech_name": "acne_score",
+                  "widget_meta": null,
+                  "widget_type": "bad_good_line"
+                },
+                "sub_metrics": [
+                  {
+                    "name": "Number of acne regions",
+                    "units": null,
+                    "value": 1,
+                    "tech_name": "number_of_regions",
+                    "widget_meta": null,
+                    "widget_type": "numeric"
+                  },
+                  {
+                    "name": "Acne regions density score",
+                    "units": null,
+                    "value": 0,
+                    "tech_name": "density_score",
+                    "widget_meta": null,
+                    "widget_type": "density"
+                  },
+                  {
+                    "name": "Average intensity of acne regions",
+                    "units": null,
+                    "value": 100,
+                    "tech_name": "average_intensity_score",
+                    "widget_meta": null,
+                    "widget_type": "density"
+                  }
+                ]
+              },
+              {
+                "area_name": "chin",
+                "main_metric": {
+                  "name": "Acne score",
+                  "units": null,
+                  "value": 100,
+                  "tech_name": "acne_score",
+                  "widget_meta": null,
+                  "widget_type": "bad_good_line"
+                },
+                "sub_metrics": [
+                  {
+                    "name": "Number of acne regions",
+                    "units": null,
+                    "value": 0,
+                    "tech_name": "number_of_regions",
+                    "widget_meta": null,
+                    "widget_type": "numeric"
+                  },
+                  {
+                    "name": "Acne regions density score",
+                    "units": null,
+                    "value": 0,
+                    "tech_name": "density_score",
+                    "widget_meta": null,
+                    "widget_type": "density"
+                  },
+                  {
+                    "name": "Average intensity of acne regions",
+                    "units": null,
+                    "value": 0,
+                    "tech_name": "average_intensity_score",
+                    "widget_meta": null,
+                    "widget_type": "density"
+                  }
+                ]
+              }
+            ],
+            "algorithm_tech_name": "acne"
+          },
+          "is_ok": true,
+          "image_id": "77662d16-6b50-40a2-9fc6-8fb458f548cc",
+          "algorithm_version_id": 36,
+          "creation_time": "2023-03-14 10:48:36",
+          "application_id": "8b5b3acc-480b-4412-8d2c-ebe6ab4384d7",
+          "application_name": "Face Skin Metrics 2.0",
+          "application_description": "Use this application to analyze the skin’s overall condition.<br>This app will check the selfie’s image quality and assess visual skin features, such as:<ol>    <li>perceived age</li>    <li>eye age</li>    <li>skin tone</li>    <li>eye bags</li>    <li>uniformness</li>    <li>redness</li>    <li>wrinkles (deprecated)</li>    <li>pores</li>    <li>sagging (deprecated)</li>    <li>acne</li>    <li>pigmentation</li>    <li>translucency</li>    <li>hydration</li>    <li>facial landmarks</li>    <li>lines</li></ol>For the calculated metrics, the application will produce analytics, which is available in the interface. You can use this application to compare subjects, track skin dynamics over time, and get skin metric reports.",
+          "application_run_id": "1796b7bf-58be-49f0-be95-c0e656bdce25",
+          "image_type": "selfie",
+          "algorithm_family_tech_name": "selfie_v2.acne"
+        },
+        {
+          "id": "557790ba-5fa7-4c5a-8157-e23c3b047b29",
+          "result": {
+            "image_type": "selfie",
+            "area_results": [
+              {
+                "area_name": "face",
+                "main_metric": {
+                  "name": "Pigmentation score",
+                  "units": null,
+                  "value": 93,
+                  "tech_name": "pigmentation_score",
+                  "widget_meta": null,
+                  "widget_type": "bad_good_line"
+                },
+                "sub_metrics": [
+                  {
+                    "name": "Number of pigmentation spots",
+                    "units": null,
+                    "value": 5,
+                    "tech_name": "number_of_regions",
+                    "widget_meta": null,
+                    "widget_type": "numeric"
+                  },
+                  {
+                    "name": "Pigmentation density score",
+                    "units": null,
+                    "value": 0,
+                    "tech_name": "density_score",
+                    "widget_meta": null,
+                    "widget_type": "density"
+                  },
+                  {
+                    "name": "Average intensity of pigmentation",
+                    "units": null,
+                    "value": 0,
+                    "tech_name": "average_intensity_score",
+                    "widget_meta": null,
+                    "widget_type": "density"
+                  },
+                  {
+                    "name": "Average size of pigmentation spots",
+                    "units": null,
+                    "value": 37,
+                    "tech_name": "average_region_size",
+                    "widget_meta": null,
+                    "widget_type": "density"
+                  },
+                  {
+                    "name": "Standard deviation of pigmentation spots size",
+                    "units": null,
+                    "value": 2,
+                    "tech_name": "region_size_std",
+                    "widget_meta": null,
+                    "widget_type": "density"
+                  }
+                ]
+              },
+              {
+                "area_name": "nose",
+                "main_metric": {
+                  "name": "Pigmentation score",
+                  "units": null,
+                  "value": 93,
+                  "tech_name": "pigmentation_score",
+                  "widget_meta": null,
+                  "widget_type": "bad_good_line"
+                },
+                "sub_metrics": [
+                  {
+                    "name": "Number of pigmentation spots",
+                    "units": null,
+                    "value": 1,
+                    "tech_name": "number_of_regions",
+                    "widget_meta": null,
+                    "widget_type": "numeric"
+                  },
+                  {
+                    "name": "Pigmentation density score",
+                    "units": null,
+                    "value": 0,
+                    "tech_name": "density_score",
+                    "widget_meta": null,
+                    "widget_type": "density"
+                  },
+                  {
+                    "name": "Average intensity of pigmentation",
+                    "units": null,
+                    "value": 0,
+                    "tech_name": "average_intensity_score",
+                    "widget_meta": null,
+                    "widget_type": "density"
+                  },
+                  {
+                    "name": "Average size of pigmentation spots",
+                    "units": null,
+                    "value": 8,
+                    "tech_name": "average_region_size",
+                    "widget_meta": null,
+                    "widget_type": "density"
+                  },
+                  {
+                    "name": "Standard deviation of pigmentation spots size",
+                    "units": null,
+                    "value": 0,
+                    "tech_name": "region_size_std",
+                    "widget_meta": null,
+                    "widget_type": "density"
+                  }
+                ]
+              },
+              {
+                "area_name": "left_cheek",
+                "main_metric": {
+                  "name": "Pigmentation score",
+                  "units": null,
+                  "value": 93,
+                  "tech_name": "pigmentation_score",
+                  "widget_meta": null,
+                  "widget_type": "bad_good_line"
+                },
+                "sub_metrics": [
+                  {
+                    "name": "Number of pigmentation spots",
+                    "units": null,
+                    "value": 1,
+                    "tech_name": "number_of_regions",
+                    "widget_meta": null,
+                    "widget_type": "numeric"
+                  },
+                  {
+                    "name": "Pigmentation density score",
+                    "units": null,
+                    "value": 0,
+                    "tech_name": "density_score",
+                    "widget_meta": null,
+                    "widget_type": "density"
+                  },
+                  {
+                    "name": "Average intensity of pigmentation",
+                    "units": null,
+                    "value": 0,
+                    "tech_name": "average_intensity_score",
+                    "widget_meta": null,
+                    "widget_type": "density"
+                  },
+                  {
+                    "name": "Average size of pigmentation spots",
+                    "units": null,
+                    "value": 40,
+                    "tech_name": "average_region_size",
+                    "widget_meta": null,
+                    "widget_type": "density"
+                  },
+                  {
+                    "name": "Standard deviation of pigmentation spots size",
+                    "units": null,
+                    "value": 0,
+                    "tech_name": "region_size_std",
+                    "widget_meta": null,
+                    "widget_type": "density"
+                  }
+                ]
+              },
+              {
+                "area_name": "right_cheek",
+                "main_metric": {
+                  "name": "Pigmentation score",
+                  "units": null,
+                  "value": 89,
+                  "tech_name": "pigmentation_score",
+                  "widget_meta": null,
+                  "widget_type": "bad_good_line"
+                },
+                "sub_metrics": [
+                  {
+                    "name": "Number of pigmentation spots",
+                    "units": null,
+                    "value": 1,
+                    "tech_name": "number_of_regions",
+                    "widget_meta": null,
+                    "widget_type": "numeric"
+                  },
+                  {
+                    "name": "Pigmentation density score",
+                    "units": null,
+                    "value": 0,
+                    "tech_name": "density_score",
+                    "widget_meta": null,
+                    "widget_type": "density"
+                  },
+                  {
+                    "name": "Average intensity of pigmentation",
+                    "units": null,
+                    "value": 0,
+                    "tech_name": "average_intensity_score",
+                    "widget_meta": null,
+                    "widget_type": "density"
+                  },
+                  {
+                    "name": "Average size of pigmentation spots",
+                    "units": null,
+                    "value": 88,
+                    "tech_name": "average_region_size",
+                    "widget_meta": null,
+                    "widget_type": "density"
+                  },
+                  {
+                    "name": "Standard deviation of pigmentation spots size",
+                    "units": null,
+                    "value": 0,
+                    "tech_name": "region_size_std",
+                    "widget_meta": null,
+                    "widget_type": "density"
+                  }
+                ]
+              },
+              {
+                "area_name": "forehead",
+                "main_metric": {
+                  "name": "Pigmentation score",
+                  "units": null,
+                  "value": 94,
+                  "tech_name": "pigmentation_score",
+                  "widget_meta": null,
+                  "widget_type": "bad_good_line"
+                },
+                "sub_metrics": [
+                  {
+                    "name": "Number of pigmentation spots",
+                    "units": null,
+                    "value": 2,
+                    "tech_name": "number_of_regions",
+                    "widget_meta": null,
+                    "widget_type": "numeric"
+                  },
+                  {
+                    "name": "Pigmentation density score",
+                    "units": null,
+                    "value": 0,
+                    "tech_name": "density_score",
+                    "widget_meta": null,
+                    "widget_type": "density"
+                  },
+                  {
+                    "name": "Average intensity of pigmentation",
+                    "units": null,
+                    "value": 0,
+                    "tech_name": "average_intensity_score",
+                    "widget_meta": null,
+                    "widget_type": "density"
+                  },
+                  {
+                    "name": "Average size of pigmentation spots",
+                    "units": null,
+                    "value": 20,
+                    "tech_name": "average_region_size",
+                    "widget_meta": null,
+                    "widget_type": "density"
+                  },
+                  {
+                    "name": "Standard deviation of pigmentation spots size",
+                    "units": null,
+                    "value": 10,
+                    "tech_name": "region_size_std",
+                    "widget_meta": null,
+                    "widget_type": "density"
+                  }
+                ]
+              },
+              {
+                "area_name": "chin",
+                "main_metric": {
+                  "name": "Pigmentation score",
+                  "units": null,
+                  "value": 100,
+                  "tech_name": "pigmentation_score",
+                  "widget_meta": null,
+                  "widget_type": "bad_good_line"
+                },
+                "sub_metrics": [
+                  {
+                    "name": "Number of pigmentation spots",
+                    "units": null,
+                    "value": 0,
+                    "tech_name": "number_of_regions",
+                    "widget_meta": null,
+                    "widget_type": "numeric"
+                  },
+                  {
+                    "name": "Pigmentation density score",
+                    "units": null,
+                    "value": 0,
+                    "tech_name": "density_score",
+                    "widget_meta": null,
+                    "widget_type": "density"
+                  },
+                  {
+                    "name": "Average intensity of pigmentation",
+                    "units": null,
+                    "value": 0,
+                    "tech_name": "average_intensity_score",
+                    "widget_meta": null,
+                    "widget_type": "density"
+                  },
+                  {
+                    "name": "Average size of pigmentation spots",
+                    "units": null,
+                    "value": 0,
+                    "tech_name": "average_region_size",
+                    "widget_meta": null,
+                    "widget_type": "density"
+                  },
+                  {
+                    "name": "Standard deviation of pigmentation spots size",
+                    "units": null,
+                    "value": 0,
+                    "tech_name": "region_size_std",
+                    "widget_meta": null,
+                    "widget_type": "density"
+                  }
+                ]
+              }
+            ],
+            "algorithm_tech_name": "pigmentation"
+          },
+          "is_ok": true,
+          "image_id": "77662d16-6b50-40a2-9fc6-8fb458f548cc",
+          "algorithm_version_id": 39,
+          "creation_time": "2023-03-14 10:48:36",
+          "application_id": "8b5b3acc-480b-4412-8d2c-ebe6ab4384d7",
+          "application_name": "Face Skin Metrics 2.0",
+          "application_description": "Use this application to analyze the skin’s overall condition.<br>This app will check the selfie’s image quality and assess visual skin features, such as:<ol>    <li>perceived age</li>    <li>eye age</li>    <li>skin tone</li>    <li>eye bags</li>    <li>uniformness</li>    <li>redness</li>    <li>wrinkles (deprecated)</li>    <li>pores</li>    <li>sagging (deprecated)</li>    <li>acne</li>    <li>pigmentation</li>    <li>translucency</li>    <li>hydration</li>    <li>facial landmarks</li>    <li>lines</li></ol>For the calculated metrics, the application will produce analytics, which is available in the interface. You can use this application to compare subjects, track skin dynamics over time, and get skin metric reports.",
+          "application_run_id": "1796b7bf-58be-49f0-be95-c0e656bdce25",
+          "image_type": "selfie",
+          "algorithm_family_tech_name": "selfie_v2.pigmentation"
+        },
+        {
+          "id": "d606e81f-1280-43ab-9e7c-489cdf76f173",
+          "result": {
+            "image_type": "selfie",
+            "area_results": [
+              {
+                "area_name": "face",
+                "main_metric": {
+                  "name": "Pores Score",
+                  "units": null,
+                  "value": 91,
+                  "tech_name": "Pores_score",
+                  "widget_meta": null,
+                  "widget_type": "bad_good_line"
+                },
+                "sub_metrics": [
+                  {
+                    "name": "Pores Number",
+                    "units": null,
+                    "value": 108,
+                    "tech_name": "pores_number",
+                    "widget_meta": null,
+                    "widget_type": "numeric"
+                  },
+                  {
+                    "name": "Pores Density",
+                    "units": null,
+                    "value": 0,
+                    "tech_name": "pores_density",
+                    "widget_meta": null,
+                    "widget_type": "density"
+                  }
+                ]
+              },
+              {
+                "area_name": "nose",
+                "main_metric": {
+                  "name": "Pores Score",
+                  "units": null,
+                  "value": 83,
+                  "tech_name": "Pores_score",
+                  "widget_meta": null,
+                  "widget_type": "bad_good_line"
+                },
+                "sub_metrics": null
+              },
+              {
+                "area_name": "forehead",
+                "main_metric": {
+                  "name": "Pores Score",
+                  "units": null,
+                  "value": 94,
+                  "tech_name": "Pores_score",
+                  "widget_meta": null,
+                  "widget_type": "bad_good_line"
+                },
+                "sub_metrics": null
+              },
+              {
+                "area_name": "right_cheek",
+                "main_metric": {
+                  "name": "Pores Score",
+                  "units": null,
+                  "value": 92,
+                  "tech_name": "Pores_score",
+                  "widget_meta": null,
+                  "widget_type": "bad_good_line"
+                },
+                "sub_metrics": null
+              },
+              {
+                "area_name": "left_cheek",
+                "main_metric": {
+                  "name": "Pores Score",
+                  "units": null,
+                  "value": 91,
+                  "tech_name": "Pores_score",
+                  "widget_meta": null,
+                  "widget_type": "bad_good_line"
+                },
+                "sub_metrics": null
+              }
+            ],
+            "algorithm_tech_name": "pores"
+          },
+          "is_ok": true,
+          "image_id": "77662d16-6b50-40a2-9fc6-8fb458f548cc",
+          "algorithm_version_id": 35,
+          "creation_time": "2023-03-14 10:48:36",
+          "application_id": "8b5b3acc-480b-4412-8d2c-ebe6ab4384d7",
+          "application_name": "Face Skin Metrics 2.0",
+          "application_description": "Use this application to analyze the skin’s overall condition.<br>This app will check the selfie’s image quality and assess visual skin features, such as:<ol>    <li>perceived age</li>    <li>eye age</li>    <li>skin tone</li>    <li>eye bags</li>    <li>uniformness</li>    <li>redness</li>    <li>wrinkles (deprecated)</li>    <li>pores</li>    <li>sagging (deprecated)</li>    <li>acne</li>    <li>pigmentation</li>    <li>translucency</li>    <li>hydration</li>    <li>facial landmarks</li>    <li>lines</li></ol>For the calculated metrics, the application will produce analytics, which is available in the interface. You can use this application to compare subjects, track skin dynamics over time, and get skin metric reports.",
+          "application_run_id": "1796b7bf-58be-49f0-be95-c0e656bdce25",
+          "image_type": "selfie",
+          "algorithm_family_tech_name": "selfie_v2.pores"
+        },
+        {
+          "id": "ccf3bad3-81cd-4789-9603-041d23539421",
+          "result": {
+            "image_type": "selfie",
+            "area_results": [
+              {
+                "area_name": "face",
+                "main_metric": {
+                  "name": "Perceived Age",
+                  "value": 38,
+                  "tech_name": "perceived_age",
+                  "widget_meta": null,
+                  "widget_type": "numeric"
+                },
+                "sub_metrics": null
+              }
+            ],
+            "algorithm_tech_name": "age"
+          },
+          "is_ok": true,
+          "image_id": "77662d16-6b50-40a2-9fc6-8fb458f548cc",
+          "algorithm_version_id": 31,
+          "creation_time": "2023-03-14 10:48:36",
+          "application_id": "8b5b3acc-480b-4412-8d2c-ebe6ab4384d7",
+          "application_name": "Face Skin Metrics 2.0",
+          "application_description": "Use this application to analyze the skin’s overall condition.<br>This app will check the selfie’s image quality and assess visual skin features, such as:<ol>    <li>perceived age</li>    <li>eye age</li>    <li>skin tone</li>    <li>eye bags</li>    <li>uniformness</li>    <li>redness</li>    <li>wrinkles (deprecated)</li>    <li>pores</li>    <li>sagging (deprecated)</li>    <li>acne</li>    <li>pigmentation</li>    <li>translucency</li>    <li>hydration</li>    <li>facial landmarks</li>    <li>lines</li></ol>For the calculated metrics, the application will produce analytics, which is available in the interface. You can use this application to compare subjects, track skin dynamics over time, and get skin metric reports.",
+          "application_run_id": "1796b7bf-58be-49f0-be95-c0e656bdce25",
+          "image_type": "selfie",
+          "algorithm_family_tech_name": "selfie_v2.age"
+        },
+        {
+          "id": "ff26c4b6-8d06-4f28-ad44-401e6eb68e12",
+          "result": {
+            "image_type": "selfie",
+            "area_results": [
+              {
+                "area_name": "face",
+                "main_metric": {
+                  "name": "Eye Age",
+                  "units": null,
+                  "value": 43,
+                  "tech_name": "eye_age",
+                  "widget_meta": null,
+                  "widget_type": "numeric"
+                },
+                "sub_metrics": null
+              },
+              {
+                "area_name": "left_eye_area",
+                "main_metric": {
+                  "name": "Left Eye Age",
+                  "units": null,
+                  "value": 45,
+                  "tech_name": "left_eye_age",
+                  "widget_meta": null,
+                  "widget_type": "numeric"
+                },
+                "sub_metrics": null
+              },
+              {
+                "area_name": "right_eye_area",
+                "main_metric": {
+                  "name": "Right Eye Age",
+                  "units": null,
+                  "value": 41,
+                  "tech_name": "right_eye_age",
+                  "widget_meta": null,
+                  "widget_type": "numeric"
+                },
+                "sub_metrics": null
+              }
+            ],
+            "algorithm_tech_name": "eyes_age"
+          },
+          "is_ok": true,
+          "image_id": "77662d16-6b50-40a2-9fc6-8fb458f548cc",
+          "algorithm_version_id": 41,
+          "creation_time": "2023-03-14 10:48:36",
+          "application_id": "8b5b3acc-480b-4412-8d2c-ebe6ab4384d7",
+          "application_name": "Face Skin Metrics 2.0",
+          "application_description": "Use this application to analyze the skin’s overall condition.<br>This app will check the selfie’s image quality and assess visual skin features, such as:<ol>    <li>perceived age</li>    <li>eye age</li>    <li>skin tone</li>    <li>eye bags</li>    <li>uniformness</li>    <li>redness</li>    <li>wrinkles (deprecated)</li>    <li>pores</li>    <li>sagging (deprecated)</li>    <li>acne</li>    <li>pigmentation</li>    <li>translucency</li>    <li>hydration</li>    <li>facial landmarks</li>    <li>lines</li></ol>For the calculated metrics, the application will produce analytics, which is available in the interface. You can use this application to compare subjects, track skin dynamics over time, and get skin metric reports.",
+          "application_run_id": "1796b7bf-58be-49f0-be95-c0e656bdce25",
+          "image_type": "selfie",
+          "algorithm_family_tech_name": "selfie_v2.eyes_age"
+        },
+        {
+          "id": "c5357f58-ee21-45ca-a038-1a644e04b228",
+          "result": {
+            "image_type": "selfie",
+            "area_results": [],
+            "algorithm_tech_name": "facial_landmarks"
+          },
+          "is_ok": true,
+          "image_id": "77662d16-6b50-40a2-9fc6-8fb458f548cc",
+          "algorithm_version_id": 52,
+          "creation_time": "2023-03-14 10:48:36",
+          "application_id": "8b5b3acc-480b-4412-8d2c-ebe6ab4384d7",
+          "application_name": "Face Skin Metrics 2.0",
+          "application_description": "Use this application to analyze the skin’s overall condition.<br>This app will check the selfie’s image quality and assess visual skin features, such as:<ol>    <li>perceived age</li>    <li>eye age</li>    <li>skin tone</li>    <li>eye bags</li>    <li>uniformness</li>    <li>redness</li>    <li>wrinkles (deprecated)</li>    <li>pores</li>    <li>sagging (deprecated)</li>    <li>acne</li>    <li>pigmentation</li>    <li>translucency</li>    <li>hydration</li>    <li>facial landmarks</li>    <li>lines</li></ol>For the calculated metrics, the application will produce analytics, which is available in the interface. You can use this application to compare subjects, track skin dynamics over time, and get skin metric reports.",
+          "application_run_id": "1796b7bf-58be-49f0-be95-c0e656bdce25",
+          "image_type": "selfie",
+          "algorithm_family_tech_name": "selfie_v2.facial_landmarks"
+        }
+      ]
+    ],
+    "createdAt": "2023-03-14T11:32:14.615Z"
+  }

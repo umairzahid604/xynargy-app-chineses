@@ -48,8 +48,8 @@ export default async function handler(req, res) {
     let imageApiUrl = `https://saas.haut.ai/api/v1/companies/${data.company_id}/datasets/${data.dataset_id}/subjects/${data.subject_id}/batches/${data.batch_id}/images/${data.image_id}/aux/`
     let imageUrl = await fetch(imageApiUrl, AuthorizeOptions)
     imageUrl = await imageUrl.json()
-    imageUrl = imageUrl[0].urls.original
-
+    // imageUrl = imageUrl[0].urls.original
+    res.json({imageUrl})
 
     // GETTING CUSTOMER MASKED DATA
     let MaskedDataApi = `https://saas.haut.ai/api/v1/companies/${data.company_id}/datasets/${data.dataset_id}/subjects/${data.subject_id}/batches/${data.batch_id}/images/${data.image_id}/results/`
@@ -58,15 +58,14 @@ export default async function handler(req, res) {
 
 
 
-    // Define a new user document
-    const user = new User({
-        email: email,
-        imageUrl: imageUrl,
-        simpleData: [data],
-        maskedData: [maskedData]
-    });
-
-    res.send("hello")
+    // // Define a new user document
+    // const user = new User({
+    //     email: email,
+    //     imageUrl: imageUrl,
+    //     simpleData: [data],
+    //     maskedData: [maskedData]
+    // });
+    
 
     // user.save()
     //     .then(() => {
