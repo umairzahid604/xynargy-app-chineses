@@ -1,6 +1,11 @@
 const mongoose = require("mongoose")
 require("dotenv").config()
-const db = require("../conn")
+const DB = require("../conn")
+
+// Use the DB object here
+DB.then(() => console.log("connection successfully set"))
+  .catch((err) => console.log(err));
+
 
 const userSchema = new mongoose.Schema({
   email: { 

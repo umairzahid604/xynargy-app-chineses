@@ -12,7 +12,7 @@ export const Graph = ({name,Data}) => {
         datasets:[{
             label:name,
             data:[...Data.map((data)=>[data[0],data[1]])],
-            backgroundColor:["green"],
+            backgroundColor:["brown"],
             borderColor:"black",
             borderWidth:2
         },
