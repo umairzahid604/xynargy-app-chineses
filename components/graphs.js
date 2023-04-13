@@ -9,7 +9,6 @@ export const Graphs = ({ Results }) => {
    
     const [Graphs, setGraphs] = useState([...Names.map((name)=>extractValues(name))])
 
-    console.log(Graphs)
 
 
     function GetFullyear(date) {
@@ -47,7 +46,6 @@ export const Graphs = ({ Results }) => {
                     const sum = OneTimeStampValues.reduce((acc, val) => acc + val, 0);
                     const ratio = parseInt(sum / OneTimeStampValues.length)
                     values.push(ratio)
-                    // console.log(Results[i].createdAt, ratio)
                 }
 
             })
@@ -56,7 +54,6 @@ export const Graphs = ({ Results }) => {
             return [e, values[i]];
         });
 
-        // console.log(name, GraphValues)
         return {name,GraphValues}
     }
 

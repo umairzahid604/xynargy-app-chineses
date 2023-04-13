@@ -35,10 +35,6 @@ export default function Home() {
   }
 
 
-useEffect(() => {
- fetch("./api/connect").then((data)=>data.json()).then(data=>console.log(data))
-}, [])
-
 
   useEffect(() => {
     if (fetchResults) {
@@ -53,7 +49,6 @@ useEffect(() => {
         }).then(data => data.json()).then(data => {
           if (data.status === 200) {
             setResults(data.Results)
-            console.log(data)
             setMode("selectModes")
             setfetchResults(false)
             return
