@@ -127,7 +127,7 @@ export default function Home() {
         <SingleReport Results={Results} />
       }
       {Mode == "compareReports" &&
-        <CompareReports />
+        <CompareReports Results={Results}/>
       }
       {Mode == "graphReports" &&
         <Graphs Results={Results} />

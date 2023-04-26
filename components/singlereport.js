@@ -1,10 +1,17 @@
 import React from 'react'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { Score } from './Score'
 export const SingleReport = ({ Results }) => {
 
     const [selectedResult, setselectedResult] = useState({})
     const [ViewResult, setViewResult] = useState({})
+
+    const [imageData, setImageData] = useState('');
+
+
+
+
+
 
     function isRequired(score) {
         const notRequired = [
@@ -40,7 +47,21 @@ export const SingleReport = ({ Results }) => {
                             )
                         })}
                     </div>
-                    <button onClick={() => setViewResult(selectedResult)}>View Report</button>
+                    <button onClick={() => {
+                        // setViewResult(selectedResult)
+                        fetch(selectedResult.imageUrl)
+                            .then((response) => response.blob())
+                            .then((blob) => {
+                                const reader = new FileReader();
+                                reader.readAsDataURL(blob);
+                                reader.onloadend = () => {
+                                    const base64data = reader.result;
+                                    setImageData(base64data);
+                                    setViewResult(selectedResult)
+
+                                };
+                            });
+                    }}>View Report</button>
                 </>
             }
 
@@ -52,7 +73,10 @@ export const SingleReport = ({ Results }) => {
 
                             if (isRequired(result?.result?.area_results[0]?.main_metric?.name)) {
                                 return (
-                                    <Score key={i} name={result?.result?.area_results[0]?.main_metric?.name} AreaResults={result?.result?.area_results} />
+                                    <>
+                                        <Score key={i} imageData={imageData} algo_tech_name={result?.result?.algorithm_tech_name} name={result?.result?.area_results[0]?.main_metric?.name} AreaResults={result?.result?.area_results} />
+
+                                    </>
                                 )
                             }
 

@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<head>
+	<meta charset="utf-8">
+	<!--styles-->
+	<style>
+		#holder-img {
+		    position: relative;
+		    display: flex;
+		    align-items: center;
+		    justify-content: center;
+		    overflow: hidden;
+		    background: #eee;
+		    max-width: 300px;
+		}
+		#holder-img svg{
+		    height: 100%;
+		    width: 100%;
+		    display: block;
+		}
+		#solidImg{
+		    max-width: 300px;
+		}
+	</style>
+</head>
+<body>
+	<!--image holder-->
+	<p>Show as svg with elements</p>
+	<div id="holder-img">
+		<svg preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
+			<rect id="box" width="100%" height="100%" fill="#fff"></rect>
+			<clipPath id="maskPolygons"></clipPath>
+			<!-- img to clip -->
+			<image id="image" width="812" height="812" clip-path="url(#maskPolygons)" src='./img.png'></image>
+			<g id="subPolygons" clip-path="url(#maskPolygons)"></g>
+		</svg>
+	</div>
+	<hr>
+	<p>Show as solid img instead of svg</p>
+	<img id="solidImg">
+	<!--example json data -->
+	<script type="text/javascript" src="./example.json"></script>
+	<script type="text/javascript">
+		//Mask colors
+		const maskColors = [
+		  {
+		    names: [
+		      'translucency',
+		      'translucency_mask_origin',
+		      'translucency_mask'
+		    ],
+		    styles: {
+		      'fill' : 'rgba(84,255,255,1)'
+		    }
+		  },
+		  {
+		    names: [
+		      'wrinkles',
+		      'wrinkles_polygon_mask_original',
+		      'wrinkles_polygon_mask_restored',
+		    ],
+		    styles: {
+		      'fill' : 'rgba(255,255,255,0.7)'
+		    }
+		  },
+		  {
+		    names: [
+		      'wrinkles_polyline_mask_original',
+		      'wrinkles_polyline_mask_restored'
+		    ],
+		    styles: {
+		      'fill' : 'none',
+		      'stroke': 'rgba(255,255,255,0.7)'
+		    }
+		  },
+		  {
+		    names: [
+		      'pigmentation',
+		      'pigmentation_mask_origin',
+		      'pigmentation_mask'
+		    ],
+		    styles: {
+		      'fill' : 'rgba(42,16,74,0.5)'
+		    }
+		  },
+		  {
+		    names: [
+		      'acne',
+		      'acne_mask_origin',
+		      'acne_mask'
+		    ],
+		    styles: {
+		      'fill' : 'rgba(255,0,0,0.5)'
+		    }
+		  },
+		  {
+		    names: [
+		      'dark_circles',
+		      'dark_circles_original_mask',
+		      'dark_circles_mask'
+		    ],
+		    styles: {
+		      'fill' : 'rgba(252,255,84,0.5)'
+		    }
+		  },
+		  {
+		    names: [
+		      'eye_bags',
+		      'eye_bags_original',
+		      'eye_bags_mask'
+		    ],
+		    styles: {
+		      'fill' : 'rgba(252,255,84,0.5)'
+		    }
+		  },
+		  {
+		    names: [
+		      'lacrimal_grooves',
+		      'lacrimal_grooves_original_mask',
+		      'lacrimal_grooves_mask'
+		    ],
+		    styles: {
+		      'fill' : 'rgba(255,255,255,0.7)'
+		    }
+		  },
+		  {
+		    names: [
+		      'pores',
+		      'pores_mask_original',
+		      'pores_mask'
+		    ],
+		    styles: {
+		      'fill' : 'rgba(1,11,102,0.5)'
+		    }
+		  },
+		  {
+		    names: [
+		      'redness',
+		      'redness_mask_original',
+		      'redness_mask'
+		    ],
+		    styles: {
+		      'fill' : 'rgba(255,80,164,1)'
+		    }
+		  },
+		  {
+		    names: [
+		      'dehydration',
+		      'dehydration_mask_original',
+		      'dehydration_mask'
+		    ],
+		    styles: {
+		      'filter' : 'blur(4px)'
+		    },
+		    bigStyles: {
+		      'filter' : 'blur(3px)'
+		    },
+		    middleStyles: {
+		      'filter' : 'blur(1.5px)'
+		    },
+		    smallStyles: {
+		      'filter' : 'blur(0.5px)'
+		    },
+		    ranges: [
+		      {
+		        range: [0,10], value: '#c5c5a0'
+		      },
+		      {
+		        range: [11,20], value: '#c5c395'
+		      },
+		      {
+		        range: [21,30], value: '#c6c082'
+		      },
+		      {
+		        range: [31,40], value: '#c6ba64'
+		      },
+		      {
+		        range: [41,50], value: '#c7b548'
+		      },
+		      {
+		        range: [51,60], value: '#c8a74c'
+		      },
+		      {
+		        range: [61,70], value: '#ca8c52'
+		      },
+		      {
+		        range: [71,80], value: '#cb7859'
+		      },
+		      {
+		        range: [81,90], value: '#cd6d5d'
+		      },
+		      {
+		        range: [91,100], value: '#ce5663'
+		      }
+		    ]
+		  },
+		  {
+		    names: [
+		      'sagging',
+		      'sagging_mask_original',
+		      'sagging_mask_restored'
+		    ],
+		    styles: {
+		      'fill' : 'none',
+		      'stroke': 'rgba(192, 223, 126, 1)',
+		      'stroke-width': '2.5px'
+		    }
+		  },
+		  {
+		    names: [
+		      'fine_lines_mask',
+		      'fine_lines_mask_original',
+		      'fine_lines_mask_restored'
+		    ],
+		    styles: {
+		      'fill' : 'none',
+		      'stroke': 'rgba(255, 0, 122, 0.9)',
+		      'stroke-width': '2.5px'
+		    }
+		  },
+		  {
+		    names: [
+		      'deep_lines_mask',
+		      'deep_lines_mask_original',
+		      'deep_lines_mask_restored'
+		    ],
+		    styles: {
+		      'fill' : 'rgba(7, 221, 67, 0.7)',
+		    }
+		  },
+		  {
+		    names: [
+		      'mustache_mask',
+		      'mustache_mask_original',
+		    ],
+		    styles: {
+		      'fill' : 'rgba(95,214,66,0.7)',
+		    }
+		  },
+		  {
+		    names: [
+		      'beard_mask',
+		      'beard_mask_original',
+		    ],
+		    styles: {
+		      'fill' : 'rgba(0,206,95,0.6)',
+		    }
+		  },
+		  {
+		    names: [
+		      'stubble_mask',
+		      'stubble_mask_original',
+		    ],
+		    styles: {
+		      'fill' : 'rgba(210,255,203,0.7)',
+		    }
+		  },
+		  {
+		    names: [
+		      'unshaven_mask',
+		      'unshaven_mask_original',
+		    ],
+		    styles: {
+		      'fill' : 'rgba(116,255,104,0.3)',
+		    }
+		  }
+		];
+
+
+		//Get SVG
+		const svg = document.querySelector('#holder-img svg');
+
+
+		//Type of mask
+		//const mask = json.find(el=>el?.result?.algorithm_tech_name === 'eye_bags');
+		//const mask = json.find(el=>el?.result?.algorithm_tech_name === 'translucency');
+		//const mask = json.find(el=>el?.result?.algorithm_tech_name === 'lines');
+		//const mask = json.find(el=>el?.result?.algorithm_tech_name === 'sagging');
+		//const mask = json.find(el=>el?.result?.algorithm_tech_name === 'uniformness');
+		//const mask = json.find(el=>el?.result?.algorithm_tech_name === 'Hydration');
+		//const mask = json.find(el=>el?.result?.algorithm_tech_name === 'redness');
+		//const mask = json.find(el=>el?.result?.algorithm_tech_name === 'acne');
+		//const mask = json.find(el=>el?.result?.algorithm_tech_name === 'pigmentation');
+		const mask = json.find(el=>el?.result?.algorithm_tech_name === 'pores');
+
+		//main face clipping mask
+		const maskMain = json.find(el=>el?.result?.algorithm_tech_name === 'front_face_areas');
+
+
+		//load photo as base64 to clip inside svg
+		//works only on server because of crossorigin
+		new Promise((res) => {
+			const img = new Image();
+			const canvas = document.createElement('canvas');
+			const ctx = canvas.getContext('2d');
+			const image = document.querySelector('#image');
+			img.src = image.getAttribute('src');
+			img.onload = () => {
+				canvas.width = img.width;
+				canvas.height = img.height;
+				ctx.drawImage(img, 0, 0, img.width, img.height);
+				const base64 = canvas.toDataURL('image/jpg');
+				ctx.clearRect(0, 0, img.width, img.height);
+				img.remove();
+				canvas.remove();
+				res(base64);
+			};			
+		}).then(base64=>{
+			//set base64 img to svg
+			image.setAttribute('href', base64);
+
+			//generate masks
+			if(mask?.result?.masks_restored?.length){
+				mask.result.masks_restored.forEach(el => {
+					generate(el, svg);
+				});			
+			}
+
+			//generate main mask to crop
+			if(maskMain?.result?.masks_restored?.length){
+
+				//Hide parts of face if needed: 
+				//forehead
+				//left_cheek
+				//right_cheek
+				//nose
+				//chin
+				//left_eye_area
+				//right_eye_area
+				const maskMainRestored = maskMain.result.masks_restored.filter(el=>{
+					return el.tech_name !== 'left_eye_area' && el.tech_name !== 'right_eye_area'
+				});
+
+				//generate
+				maskMainRestored.forEach(el => {
+					generate(el, svg, true);
+				});
+			}
+
+			getPngImage(svg);
+		})
+
+		function getPngImage(svg) {
+			const svgDocType = document.implementation.createDocumentType(
+				'svg:svg',
+				'-//W3C//DTD SVG 1.1//EN',
+				'http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd'
+			);
+			const svgDoc = document.implementation.createDocument(
+				'http://www.w3.org/2000/svg',
+				'svg:svg',
+				svgDocType
+			);
+
+			svgDoc.replaceChild(svg.cloneNode(true), svgDoc.documentElement);
+
+			const img = new Image();
+			img.crossOrigin = 'Anonymous';
+			img.src = 'data:image/svg+xml;base64,' + btoa(new XMLSerializer().serializeToString(svgDoc));
+			img.onload = (res) => {
+				document.querySelector('#solidImg').setAttribute('src',img.src);
+				img.remove();
+			};
+		}
+
+		function objectGenerate(type, c, group) {
+		    let object = null;
+		    //Polygon
+		    if (type === 'MultiPolygon') {
+				object = group.appendChild(document.createElementNS("http://www.w3.org/2000/svg", "polygon"));      
+				object.setAttribute("points",c[0]);
+		    }
+		    //Point
+		    if (type === 'MultiPoint') {
+				object = group.appendChild(document.createElementNS("http://www.w3.org/2000/svg", "circle"));      
+				object.setAttribute("cx",c[0]);
+				object.setAttribute("cy",c[1]);
+				object.setAttribute("r",c[2]);
+		    }
+		    //MultiLineString
+		    if (type === 'MultiLineString') {
+				object = group.appendChild(document.createElementNS("http://www.w3.org/2000/svg", "polyline"));      
+				object.setAttribute("points",c);
+		    }
+		    return object;
+		}
+
+		function generate(DATA, svg, crop=false) {
+			//Set viewBox
+			svg.setAttribute("viewBox", DATA.view_box);
+
+			//Styles for different size of image
+			const boxWidth = DATA.view_box.split(' ')[2];
+		    const maskColor = maskColors.find(
+		      mask => mask.names.indexOf(DATA.tech_name) !== -1
+		    );
+		    let styles = maskColor?.styles;
+			if(boxWidth < 500) {
+				styles = maskColor?.smallStyles || styles;
+			} else if(boxWidth < 1000) {
+				styles = maskColor?.middleStyles || styles;
+			} else if(boxWidth < 2000) {
+				styles = maskColor?.bigStyles || styles;
+			}
+
+			//Sum to calculate Hydration mask
+			let intSum = 0;
+
+			DATA.features.forEach(function(d){
+				//Group for svg objects
+				let group = '';
+				if(!crop){
+					group = svg.querySelector('#subPolygons').appendChild(document.createElementNS("http://www.w3.org/2000/svg", "g"));
+				} else {
+					group = svg.querySelector('#maskPolygons');
+				}
+
+				//Base styles
+				if (DATA.fill) {
+					group.style.fill = DATA.fill;
+				}
+
+				//Adding our custom styles
+				if (styles) {
+				  for (const [key, value] of Object.entries(styles)) {
+				  	group.style[key] = value;
+				  }
+				}
+
+				//Intensity and custom intensity for 
+				if(maskColor && maskColor.names.indexOf('dehydration') !== -1) {
+				  intSum += d.properties.intensity*100;
+				  group.style['fill'] = maskColor.ranges.find(r=> r.range[0] <= intSum && r.range[1] >= intSum)?.value || '';
+				} else {
+				  group.style['fill-opacity'] = d.properties.intensity;
+				}
+
+				//Generating objects
+				d.geometry.coordinates.forEach(function(c){
+					const object = objectGenerate(d.geometry.type, c, group);
+					object.setAttribute('vector-effect', true);
+					object.setAttribute('non-scaling-stroke', true);
+				});
+			});
+		}
+	</script> 
+</body>
