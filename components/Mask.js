@@ -242,12 +242,12 @@ export const Mask = ({ algo_tech_name, imageData }) => {
         // imageHolder.current.setAttribute('href', `data:image/png;base64,${imageData}`);
         imageHolder.current.setAttribute('href', imageData);
 
-        //generate masks
-        if (mask?.result?.masks_restored?.length) {
-            mask.result.masks_restored.forEach(el => {
-                generate(el, svgHolder.current);
-            });
-        }
+        // //generate masks
+        // if (mask?.result?.masks_restored?.length) {
+        //     mask.result.masks_restored.forEach(el => {
+        //         generate(el, svgHolder.current);
+        //     });
+        // }
 
 
         //generate main mask to crop
@@ -261,20 +261,30 @@ export const Mask = ({ algo_tech_name, imageData }) => {
         	//chin
         	//left_eye_area
         	//right_eye_area
-        	const maskMainRestored = maskMain.result.masks_restored.filter(el=>{
-        		return el.tech_name !== 'left_eye_area' && el.tech_name !== 'right_eye_area'
-        		// return el.tech_name === algo_tech_name 
+        	
+            const maskMainRestored = maskMain.result.masks_restored.filter(el=>{
+        		
+                return el.tech_name !== 'left_eye_area' && el.tech_name !== 'right_eye_area'
+        		// return el.tech_name === "face"
 
         	});
-
-        	//generate
-        	maskMainRestored.forEach(el => {
-        		generate(el, svgHolder.current, true);
+            
+            //generate
+        	
+            maskMainRestored.forEach(el => {
+        		generate(el, svgHolder.current, true,el.tech_name);
         	});
+        
+            
+
+
+            
+
+        	
         }
 
 
-        function objectGenerate(type, c, group) {
+        function objectGenerate(type, c, group,tech_name) {
             let object = null;
             //Polygon
             if (type === 'MultiPolygon') {
@@ -296,7 +306,7 @@ export const Mask = ({ algo_tech_name, imageData }) => {
             return object;
         }
 
-        function generate(DATA, svg, crop = false) {
+        function generate(DATA, svg, crop = false,tech_name) {
             console.log("svg" + svg)
             //Set viewBox
             if (svg == null) return
@@ -352,22 +362,22 @@ export const Mask = ({ algo_tech_name, imageData }) => {
 
                 //Generating objects
                 d.geometry.coordinates.forEach(function (c) {
-                    const object = objectGenerate(d.geometry.type, c, polygonsHolder.current);
+                    const object = objectGenerate(d.geometry.type, c, polygonsHolder.current,tech_name);
                     object.setAttribute('vector-effect', true);
                     object.setAttribute('non-scaling-stroke', true);
                 });
             });
         }
 
-    }, [algo_tech_name])
+    }, [])
 
 
 
     return (
         <div>
-
+            {/* <>{algo_tech_name}</> */}
             <svg preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" ref={svgHolder}>
-                <rect id="box" width="100%" height="100%" fill="#fff" />
+                {/* <rect id="box" width="50%" height="50%" fill="#fff" /> */}
                 <clipPath id="maskPolygons" ref={polygonsHolder} />
                 {/* img to clip */}
                 <image id="image" width="812" height="812" clipPath="url(#maskPolygons)" ref={imageHolder} />
