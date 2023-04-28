@@ -7,7 +7,7 @@ export default async function handler(req, res) {
     let email = req.body.email.toLowerCase()
     
     try{
-        let Results = await User.find({email:email}).maxTimeMS(20000).lean().limit(2) 
+        let Results = await User.find({email:email}).maxTimeMS(20000).lean() 
         if(Results.length == 0) return res.status(404).json({error:{message:"Ooops! Couldn't Find any Results"},status:404})
         res.status(200).json({Results:Results,status:200})
     }

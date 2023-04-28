@@ -93,7 +93,12 @@ export const Score = ({ name, AreaResults, algo_tech_name, imageData }) => {
 
 
     return (
-        <div className='singleAlgoResult'>
+        <div className='singleAlgoResult' onClick={(e)=>{
+            // console.log()
+            if(e.target.classList.contains("submatrics")){
+                setShowMatrics(false)
+            }
+            }}>
             <style jsx>
                 {`
             .scoreline{
@@ -110,10 +115,21 @@ export const Score = ({ name, AreaResults, algo_tech_name, imageData }) => {
                     {AreaResults.filter((result) => result?.area_name !== "left_eye_area" && result?.area_name !== 'right_eye_area' && result?.area_name !== "left_eye_corner" && result?.area_name !== 'right_eye_corner').map((result, i) => {
                         return (
                             <>
-                                <div className={`matric ${result?.area_name}`} key={i} onMouseEnter={() => {
+                                <div className={`matric ${result?.area_name}`} key={i} onClick={(e) => {
+                                    console.log(e.target)
                                     setShowMatrics(true)
-                                    setMatrics({ name: result?.area_name, value: result?.main_metric.value, algoName: name, pathColor: `${ScoreColor(result?.main_metric.value)}`, textColor: `${ScoreColor(result?.main_metric.value)}`,condition: ScorePosition(result?.main_metric.value) })
-                                }} onMouseLeave={() => { setShowMatrics(false) }}>
+
+                                    // else {
+                                    //     setShowMatrics(true)
+                                    // }
+                                    setMatrics({ name: result?.area_name, value: result?.main_metric.value, algoName: name, pathColor: `${ScoreColor(result?.main_metric.value)}`, textColor: `${ScoreColor(result?.main_metric.value)}`, condition: ScorePosition(result?.main_metric.value) })
+                                }} onMouseEnter={() => { 
+                                    setMatrics({ name: result?.area_name, value: result?.main_metric.value, algoName: name, pathColor: `${ScoreColor(result?.main_metric.value)}`, textColor: `${ScoreColor(result?.main_metric.value)}`, condition: ScorePosition(result?.main_metric.value) 
+                                }) 
+                                setShowMatrics(true)
+                    
+                                
+                                }}>
                                     {/* <span>{result?.main_metric.value}</span> */}
 
                                     <span className={`dot ${ScorePosition(result?.main_metric.value)}`}></span> <span>{result?.area_name}</span>
@@ -133,9 +149,9 @@ export const Score = ({ name, AreaResults, algo_tech_name, imageData }) => {
                     <div className="line"></div>
                     <div className="circleWrapper">
 
-                    <div className="circle" style={{ width: 50, height: 50 }}>
-                    <CircularProgressbar styles={buildStyles({ pathColor: Matrics.pathColor, textColor: Matrics.textColor, textSize: '23px', })} value={Matrics.value} text={`${Matrics.value}%`} />
-                    </div>
+                        <div className="circle" style={{ width: 50, height: 50 }}>
+                            <CircularProgressbar styles={buildStyles({ pathColor: Matrics.pathColor, textColor: Matrics.textColor, textSize: '23px', })} value={Matrics.value} text={`${Matrics.value}%`} />
+                        </div>
                     </div>
                 </div>
                 <div className='mask'>

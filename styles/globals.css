@@ -261,7 +261,20 @@ a {
   max-width: 700px;
 }
 
-.container .singleReport .ResultBox {
+.CompareReports {
+  display: flex;
+  width: 900px;
+  min-width: 600px;
+}
+
+.backTocompare {
+  display: block;
+  width: 900px;
+  min-width: 600px;
+  padding: 10px;
+}
+
+.ResultBox {
   width: 80%;
   min-width: 350px;
   max-width: 1000px;
@@ -269,7 +282,7 @@ a {
   margin-bottom: 20px;
 }
 
-.container .singleReport .ResultBox button {
+.ResultBox button {
   width: 100%;
   min-width: 350px;
   max-width: 1000px;
@@ -277,7 +290,7 @@ a {
   margin-bottom: 20px;
 }
 
-.container .singleReport .ResultBox .date {
+.ResultBox .date {
   width: 100%;
   /* background-color: #4d4d4d; */
   padding: 10px;
@@ -289,7 +302,7 @@ a {
 
 }
 
-.container .singleReport .ResultBox .singleAlgoResult {
+.ResultBox .singleAlgoResult {
   width: 100%;
   padding: 3px;
   border-radius: 5px;
@@ -298,9 +311,10 @@ a {
   margin-top: 8px;
   box-shadow: 0px 1px 1px 0px black;
   background-color: white;
+  margin-left: 5px;
 }
 
-.container .singleReport .ResultBox .singleAlgoResult .algoName {
+.ResultBox .singleAlgoResult .algoName {
   width: 100%;
   display: flex;
   justify-content: space-between;
@@ -313,7 +327,7 @@ a {
   font-weight: bold;
 }
 
-.container .singleReport .ResultBox .singleAlgoResult .algoName .name {
+.ResultBox .singleAlgoResult .algoName .name {
   display: flex;
   align-items: center;
   /* justify-content: center; */
@@ -326,7 +340,7 @@ a {
   font-weight: bold;
 }
 
-.container .singleReport .ResultBox .singleAlgoResult .algoName .button {
+.ResultBox .singleAlgoResult .algoName .button {
   width: 25px;
   height: 25px;
   font-size: 20px;
@@ -338,20 +352,20 @@ a {
 
 }
 
-.container .singleReport .ResultBox .singleAlgoResult .tag {
+.ResultBox .singleAlgoResult .tag {
   padding: 5px;
   border-radius: 3px;
   box-shadow: 1px 1px 1px 1px black;
 }
 
-.container .singleReport .ResultBox .singleAlgoResult .scoreline {
+.ResultBox .singleAlgoResult .scoreline {
   min-width: 1%;
   height: 5px;
   margin-top: 2px;
   margin-bottom: 5px;
 }
 
-.container .singleReport .ResultBox .singleAlgoResult .submatrics {
+.ResultBox .singleAlgoResult .submatrics {
   width: 100%;
   /* padding: 3px; */
   /* padding: 3px; */
@@ -370,10 +384,11 @@ a {
   color: white;
 
 
+
 }
 
 
-.container .singleReport .ResultBox .singleAlgoResult .submatrics .mask {
+.ResultBox .singleAlgoResult .submatrics .mask {
   width: 70%;
   height: 70%;
   margin: 40px 0;
@@ -381,24 +396,23 @@ a {
   min-height: 300px;
   min-width: 300px;
   /* border: 2px solid red; */
-
+  pointer-events: none;
 
 }
 
-.container .singleReport .ResultBox .singleAlgoResult .show {
+.ResultBox .singleAlgoResult .show {
   margin-top: 8px;
   max-height: 10000px;
   transition: .3s max-height;
   cursor: pointer;
-
 }
 
-.container .singleReport .ResultBox .singleAlgoResult .matricWrapper {
+.ResultBox .singleAlgoResult .matricWrapper {
   display: flex;
   /* justify-content: space-between; */
   padding: 5px 10px;
   position: absolute;
-  top: 10%;
+  top: 5%;
   left: 1%;
   z-index: 99999;
   /* justify-content: center; */
@@ -408,7 +422,15 @@ a {
 
 }
 
-.container .singleReport .ResultBox .singleAlgoResult .matric {
+@media only screen and (max-width: 500px) {
+  .ResultBox .singleAlgoResult .matricWrapper {
+    top: 1%;
+    left: -4%;
+  }
+}
+
+
+.ResultBox .singleAlgoResult .matric {
   display: flex;
   /* justify-content: space-between; */
   padding: 5px 10px;
@@ -426,21 +448,21 @@ a {
 
 }
 
-.container .singleReport .ResultBox .singleAlgoResult .matric .dot {
-width: 10px;
-height: 10px;
-background-color: white;
-border-radius: 100%; 
+.ResultBox .singleAlgoResult .matric .dot {
+  width: 10px;
+  height: 10px;
+  background-color: white;
+  border-radius: 100%;
 
 }
 
 
-.container .singleReport .ResultBox .singleAlgoResult .matric span{
+.ResultBox .singleAlgoResult .matric span {
   margin-left: 5px;
 }
 
 
-.MatricsWrapper{
+.MatricsWrapper {
   /* display: none; */
   position: absolute;
   right: -10%;
@@ -457,26 +479,28 @@ border-radius: 100%;
   overflow: hidden;
 }
 
-.MatricsWrapper .line{
- 
+.MatricsWrapper .line {
+
   width: 100%;
   height: 2px;
   background-color: #ff0000;
   margin: 10px 0;
 }
 
-.showMatricsWrapper{
+.showMatricsWrapper {
   /* display: block; */
   height: 200px;
   width: 200px;
   right: 1%;
 
 }
-.circle{
+
+.circle {
   display: flex;
   align-items: center;
 }
-/* .container .singleReport .ResultBox .singleAlgoResult .face {
+
+/* .ResultBox .singleAlgoResult .face {
   display: flex;
   justify-content: space-between;
   top: 0%;
@@ -484,7 +508,7 @@ border-radius: 100%;
 }
 
 
-.container .singleReport .ResultBox .singleAlgoResult .forehead {
+.ResultBox .singleAlgoResult .forehead {
   display: flex;
   justify-content: space-between;
   padding: 5px 10px;
@@ -492,7 +516,7 @@ border-radius: 100%;
   left: 0%;
 }
 
-.container .singleReport .ResultBox .singleAlgoResult .nose {
+.ResultBox .singleAlgoResult .nose {
   display: flex;
   justify-content: space-between;
   top: 35%;
@@ -500,7 +524,7 @@ border-radius: 100%;
 }
 
 
-.container .singleReport .ResultBox .singleAlgoResult .right_cheek {
+.ResultBox .singleAlgoResult .right_cheek {
   display: flex;
   justify-content: space-between;
   padding: 5px 10px;
@@ -509,7 +533,7 @@ border-radius: 100%;
 
 }
 
-.container .singleReport .ResultBox .singleAlgoResult .left_cheek {
+.ResultBox .singleAlgoResult .left_cheek {
   display: flex;
   justify-content: space-between;
   padding: 5px 10px;
@@ -519,7 +543,7 @@ border-radius: 100%;
 }
 
 
-.container .singleReport .ResultBox .singleAlgoResult .chin {
+.ResultBox .singleAlgoResult .chin {
   display: flex;
   justify-content: space-between;
   top: 83%;
@@ -531,35 +555,35 @@ border-radius: 100%;
 
 
 
-.container .singleReport .ResultBox .singleAlgoResult .Bad {
+.ResultBox .singleAlgoResult .Bad {
   background-color: #ff0000 !important;
   color: white;
 
 }
 
-.container .singleReport .ResultBox .singleAlgoResult .Rather {
+.ResultBox .singleAlgoResult .Rather {
   background-color: #bdba09 !important;
   color: white;
 }
 
-.container .singleReport .ResultBox .singleAlgoResult .Average {
+.ResultBox .singleAlgoResult .Average {
   background-color: #fffb00 !important;
   color: #000000;
 }
 
-.container .singleReport .ResultBox .singleAlgoResult .Good {
+.ResultBox .singleAlgoResult .Good {
   background-color: #8bff48 !important;
   color: white;
 
 }
 
-.container .singleReport .ResultBox .singleAlgoResult .Great {
+.ResultBox .singleAlgoResult .Great {
   background-color: #48ff00 !important;
   color: white;
 
 }
 
-.container .singleReport .ResultBox .singleAlgoResult .Excellent {
+.ResultBox .singleAlgoResult .Excellent {
   background-color: #33ff00 !important;
   color: white;
 
