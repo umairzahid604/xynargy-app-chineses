@@ -6,6 +6,26 @@ export const SingleReport = ({ Results }) => {
     const [selectedResult, setselectedResult] = useState({})
     const [ViewResult, setViewResult] = useState({})
 
+    
+    const techNames = ['translucency_score', 'uniformness_score', 'hydration_score', 'lines_score', 'redness_score', 'ita_score', 'image_quality_score', 'eye_area_condition', 
+    'acne_score', 'pigmentation_score', 'Pores_score', 'perceived_age', 'eye_age']
+
+   function ExtractTechValues(Result,techName){
+    console.log(techName)
+    let results = Result.maskedData[0]
+    results = results.filter((el)=>el.result?.area_results != undefined && el.result?.area_results.length != 0)
+    let requiredResult = results.find(el=>el.result.area_results[0]?.main_metric?.tech_name == techName)
+    // let requiredResult = results.map(el=>el.result.area_results[0]?.main_metric?.tech_name )
+    return requiredResult
+    // console.log(requiredResult)
+
+    } 
+   
+//    useEffect(() => {
+//      ExtractTechValues(techNames[4])
+   
+//    }, [])
+   
     const [imageData, setImageData] = useState('');
 
 
@@ -48,7 +68,6 @@ export const SingleReport = ({ Results }) => {
                         })}
                     </div>
                     <button onClick={() => {
-                        // setViewResult(selectedResult)
                         fetch(selectedResult.imageUrl)
                             .then((response) => response.blob())
                             .then((blob) => {
@@ -57,7 +76,9 @@ export const SingleReport = ({ Results }) => {
                                 reader.onloadend = () => {
                                     const base64data = reader.result;
                                     setImageData(base64data);
-                                    setViewResult(selectedResult)
+                                    // setViewResult(selectedResult)
+                                    setViewResult({email:selectedResult.email,createdAt:selectedResult.createdAt, techs:[...techNames.map((techname)=>ExtractTechValues(selectedResult,techname))]})
+                                    console.log(ViewResult)
 
                                 };
                             });
@@ -68,7 +89,7 @@ export const SingleReport = ({ Results }) => {
             {Object.keys(ViewResult).length != 0 &&
                 <div className='ResultBox'>
                     <h3 className='date'>{ViewResult.email} {GetFullyear(ViewResult.createdAt)} {extractTime(ViewResult.createdAt)}</h3>
-                    {ViewResult.maskedData[0].map((result, i) => {
+                    {ViewResult.techs.map((result, i) => {
                         if (result?.result?.area_results?.length != undefined && result?.result?.area_results?.length != 0) {
 
                             if (isRequired(result?.result?.area_results[0]?.main_metric?.name)) {

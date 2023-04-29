@@ -1,6 +1,8 @@
 import React from 'react'
 import { useState } from 'react'
 import { Score } from './Score'
+import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/css';
 
 export const CompareReports = ({ Results }) => {
 
@@ -11,7 +13,20 @@ export const CompareReports = ({ Results }) => {
   const [FirstImageData, setFirstImageData] = useState('');
   const [SecondImageData, setSecondImageData] = useState('');
 
+  const techNames = ['translucency_score', 'uniformness_score', 'hydration_score', 'lines_score', 'redness_score', 'ita_score', 'image_quality_score', 'eye_area_condition',
+    'acne_score', 'pigmentation_score', 'Pores_score', 'perceived_age', 'eye_age']
 
+
+  function ExtractTechValues(Result, techName) {
+    console.log(techName)
+    let results = Result.maskedData[0]
+    results = results.filter((el) => el.result?.area_results != undefined && el.result?.area_results.length != 0)
+    let requiredResult = results.find(el => el.result.area_results[0]?.main_metric?.tech_name == techName)
+    // let requiredResult = results.map(el=>el.result.area_results[0]?.main_metric?.tech_name )
+    return requiredResult
+    // console.log(requiredResult)
+
+  }
 
 
 
@@ -46,8 +61,9 @@ export const CompareReports = ({ Results }) => {
 
   return (
     <>
-      <div className='singleReport'>
-        {!ShowCompareResults &&
+      {!ShowCompareResults &&
+
+        <div className='singleReport'>
           <>
             <div className="heading">Report History</div>
             <div className="historyWrapper">
@@ -85,6 +101,7 @@ export const CompareReports = ({ Results }) => {
                 // alert("date must be greater than")
                 return
               }
+
               fetch(FirstSelectedResult.imageUrl)
                 .then((response) => response.blob())
                 .then((blob) => {
@@ -93,90 +110,104 @@ export const CompareReports = ({ Results }) => {
                   reader.onloadend = () => {
                     const base64data = reader.result;
                     setFirstImageData(base64data);
+                    setFirstSelectedResult({ email: FirstSelectedResult.email, createdAt: FirstSelectedResult.createdAt, techs: [...techNames.map((techname) => ExtractTechValues(FirstSelectedResult, techname))] })
 
+                    // second image
+                    fetch(SecondSelectedResult.imageUrl)
+                      .then((response) => response.blob())
+                      .then((blob) => {
+                        const reader = new FileReader();
+                        reader.readAsDataURL(blob);
+                        reader.onloadend = () => {
+                          const base64data = reader.result;
+                          setSecondImageData(base64data);
+                          setSecondSelectedResult({ email: SecondSelectedResult.email, createdAt: SecondSelectedResult.createdAt, techs: [...techNames.map((techname) => ExtractTechValues(SecondSelectedResult, techname))] })
+
+
+                          setShowCompareResults(true)
+                        };
+                      });
 
                   };
                 });
 
-              fetch(SecondSelectedResult.imageUrl)
-                .then((response) => response.blob())
-                .then((blob) => {
-                  const reader = new FileReader();
-                  reader.readAsDataURL(blob);
-                  reader.onloadend = () => {
-                    const base64data = reader.result;
-                    setSecondImageData(base64data);
-                    setShowCompareResults(true)
-                  };
-                });
+
 
 
 
             }}>View Report</button>
           </>
-        }
 
 
-      </div>
+        </div>
+      }
 
       {ShowCompareResults &&
         <div className='CompareReports'>
           {Object.keys(FirstSelectedResult).length != 0 &&
             <div className='ResultBox'>
               <h3 className='date'>{FirstSelectedResult.email} {GetFullyear(FirstSelectedResult.createdAt)} {extractTime(FirstSelectedResult.createdAt)}</h3>
-              {FirstSelectedResult.maskedData[0].map((result, i) => {
-                if (result?.result?.area_results?.length != undefined && result?.result?.area_results?.length != 0) {
 
-                  if (isRequired(result?.result?.area_results[0]?.main_metric?.name)) {
-                    return (
-                      <>
-                        <Score key={i} imageData={FirstImageData} algo_tech_name={result?.result?.algorithm_tech_name} name={result?.result?.area_results[0]?.main_metric?.name} AreaResults={result?.result?.area_results} />
 
-                      </>
-                    )
+              <div className="scoreWrapper">
+
+                {FirstSelectedResult.techs.map((result, i) => {
+                  if (result?.result?.area_results?.length != undefined && result?.result?.area_results?.length != 0) {
+
+                    if (isRequired(result?.result?.area_results[0]?.main_metric?.name)) {
+                      return (
+                        <>
+                          <Score key={i} imageData={FirstImageData} algo_tech_name={result?.result?.algorithm_tech_name} name={result?.result?.area_results[0]?.main_metric?.name} AreaResults={result?.result?.area_results} />
+
+                        </>
+                      )
+                    }
+
                   }
 
-                }
+                  //    
+                })}
+              </div>
 
-                //    
-              })}
             </div>
           }
 
           {Object.keys(SecondSelectedResult).length != 0 &&
             <div className='ResultBox'>
               <h3 className='date'>{SecondSelectedResult.email} {GetFullyear(SecondSelectedResult.createdAt)} {extractTime(SecondSelectedResult.createdAt)}</h3>
-              {SecondSelectedResult.maskedData[0].map((result, i) => {
-                if (result?.result?.area_results?.length != undefined && result?.result?.area_results?.length != 0) {
 
-                  if (isRequired(result?.result?.area_results[0]?.main_metric?.name)) {
-                    return (
-                      <>
-                        <Score key={i} imageData={SecondImageData} algo_tech_name={result?.result?.algorithm_tech_name} name={result?.result?.area_results[0]?.main_metric?.name} AreaResults={result?.result?.area_results} />
+              <div className="scoreWrapper">
 
-                      </>
-                    )
+                {SecondSelectedResult.techs.map((result, i) => {
+                  if (result?.result?.area_results?.length != undefined && result?.result?.area_results?.length != 0) {
+
+                    if (isRequired(result?.result?.area_results[0]?.main_metric?.name)) {
+                      return (
+                        <>
+                          <Score key={i} imageData={SecondImageData} algo_tech_name={result?.result?.algorithm_tech_name} name={result?.result?.area_results[0]?.main_metric?.name} AreaResults={result?.result?.area_results} />
+
+                        </>
+                      )
+                    }
+
                   }
 
-                }
-
-                //    
-              })}
+                  //    
+                })}
+              </div>
 
             </div>
-
-
           }
 
         </div>
 
       }
       {ShowCompareResults &&
-      <button className='backTocompare' onClick={() => {
-        setShowCompareResults(false)
+        <button className='backTocompare' onClick={() => {
+          setShowCompareResults(false)
 
-      }}>Back to Reports</button>
-}
+        }}>Back to Reports</button>
+      }
     </>
 
   )

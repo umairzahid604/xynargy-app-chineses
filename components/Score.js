@@ -9,11 +9,7 @@ export const Score = ({ name, AreaResults, algo_tech_name, imageData }) => {
     const [expand, setexpand] = useState(false)
     const [ShowMatrics, setShowMatrics] = useState(false)
     const [Matrics, setMatrics] = useState({})
-
-
-
-
-
+    
     function ScoreColor(value) {
         if (value >= 90) {
             return "#28c401"
@@ -80,6 +76,8 @@ export const Score = ({ name, AreaResults, algo_tech_name, imageData }) => {
 
     }
 
+   
+
     useEffect(() => {
         let SumOfValues = 0
         for (let index = 0; index <= AreaResults.length; index++) {
@@ -93,12 +91,12 @@ export const Score = ({ name, AreaResults, algo_tech_name, imageData }) => {
 
 
     return (
-        <div className='singleAlgoResult' onClick={(e)=>{
+        <div className='singleAlgoResult' onClick={(e) => {
             // console.log()
-            if(e.target.classList.contains("submatrics")){
+            if (!e.target.classList.contains("matric")) {
                 setShowMatrics(false)
             }
-            }}>
+        }}>
             <style jsx>
                 {`
             .scoreline{
@@ -123,12 +121,13 @@ export const Score = ({ name, AreaResults, algo_tech_name, imageData }) => {
                                     //     setShowMatrics(true)
                                     // }
                                     setMatrics({ name: result?.area_name, value: result?.main_metric.value, algoName: name, pathColor: `${ScoreColor(result?.main_metric.value)}`, textColor: `${ScoreColor(result?.main_metric.value)}`, condition: ScorePosition(result?.main_metric.value) })
-                                }} onMouseEnter={() => { 
-                                    setMatrics({ name: result?.area_name, value: result?.main_metric.value, algoName: name, pathColor: `${ScoreColor(result?.main_metric.value)}`, textColor: `${ScoreColor(result?.main_metric.value)}`, condition: ScorePosition(result?.main_metric.value) 
-                                }) 
-                                setShowMatrics(true)
-                    
-                                
+                                }} onMouseEnter={() => {
+                                    setMatrics({
+                                        name: result?.area_name, value: result?.main_metric.value, algoName: name, pathColor: `${ScoreColor(result?.main_metric.value)}`, textColor: `${ScoreColor(result?.main_metric.value)}`, condition: ScorePosition(result?.main_metric.value)
+                                    })
+                                    setShowMatrics(true)
+
+
                                 }}>
                                     {/* <span>{result?.main_metric.value}</span> */}
 

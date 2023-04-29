@@ -264,18 +264,68 @@ a {
 .CompareReports {
   display: flex;
   width: 900px;
-  min-width: 600px;
+  min-width: 350px;
+
 }
+
+@media only screen and (max-width: 900px) {
+ .CompareReports{
+  flex-direction: column;
+  /* width: 350px; */
+  width: auto;
+  max-width: 700px;
+
+  /* width: 600px; */
+ }
+ .CompareReports .ResultBox{
+  display: flex;
+  width: 350px;
+  flex-direction: column;
+  width: auto;
+  min-width: 350px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0px 2px 1px 0px black;
+ }
+
+ .CompareReports .ResultBox .scoreWrapper{
+  display: flex;
+  overflow: scroll;
+  width: 350px;
+ }
+
+ .CompareReports .ResultBox .scoreWrapper .singleAlgoResult{
+  margin-left: 20px;
+  margin-right: 20px;
+  width: 400px;
+  min-height: 400px;
+ }
+
+ .CompareReports .ResultBox .scoreWrapper .singleAlgoResult .matricWrapper{
+  left: -4%;
+ top: 1%;
+}
+
+.CompareReports .ResultBox .scoreWrapper .singleAlgoResult .showMatricsWrapper{
+width: 170px;
+height: auto;
+}
+
+.CompareReports .ResultBox .scoreWrapper .singleAlgoResult .mask{
+  margin-top: 100px;
+}
+}
+
 
 .backTocompare {
   display: block;
-  width: 900px;
-  min-width: 600px;
+  width: 70%;
+  min-width: 350px;
   padding: 10px;
 }
 
 .ResultBox {
-  width: 80%;
+  width: 100%;
   min-width: 350px;
   max-width: 1000px;
   background-color: #f7f7f7;
