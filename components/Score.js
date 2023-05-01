@@ -131,7 +131,7 @@ export const Score = ({ name, AreaResults, algo_tech_name, imageData }) => {
                                 }}>
                                     {/* <span>{result?.main_metric.value}</span> */}
 
-                                    <span className={`dot ${ScorePosition(result?.main_metric.value)}`}></span> <span>{result?.area_name}</span>
+                                    <span className={`dot ${ScorePosition(result?.main_metric.value)}`}></span>{result?.area_name}
                                 </div>
 
                             </>
