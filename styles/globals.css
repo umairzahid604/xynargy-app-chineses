@@ -329,7 +329,7 @@ a {
 }
 
 
-.CompareReports .ResultBox .scoreWrapper .singleAlgoResult .matricWrapper .matric span{
+.singleAlgoResult .matricWrapper .matric span{
   margin-right: 5px;
 }
 .backTocompare {

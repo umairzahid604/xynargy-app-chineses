@@ -67,7 +67,7 @@ export const CompareReports = ({ Results }) => {
 
         <div className='singleReport'>
           <>
-            <div className="heading">Report History</div>
+            <div className="heading">举报历史</div>
             <div className="historyWrapper">
               {Results.map((result, i) => {
                 return (
@@ -77,7 +77,7 @@ export const CompareReports = ({ Results }) => {
             </div>
 
             <>
-              <div className="heading">Compare With</div>
+              <div className="heading">与之比较</div>
               <div className="historyWrapper">
                 {Results.map((result, i) => {
                   if (isDatelater(result.createdAt, FirstSelectedResult.createdAt)) {
@@ -90,7 +90,7 @@ export const CompareReports = ({ Results }) => {
                   }
 
                 })}
-                {Results.filter((result) => isDatelater(result.createdAt, FirstSelectedResult.createdAt)).length == 0 ? <div>Selected Date must be earlier than compare Date</div> : ""}
+                {Results.filter((result) => isDatelater(result.createdAt, FirstSelectedResult.createdAt)).length == 0 ? <div>所选日期必须早于比较日期</div> : ""}
 
               </div>
             </>
@@ -142,7 +142,7 @@ export const CompareReports = ({ Results }) => {
 
 
 
-            }}>{Loading ? "..." : "View Report"}</button>
+            }}>{Loading ? "..." : "查看报告"}</button>
           </>
 
 
@@ -213,7 +213,7 @@ export const CompareReports = ({ Results }) => {
         <button className='backTocompare' onClick={() => {
           setShowCompareResults(false)
 
-        }}>Back to Reports</button>
+        }}>返回报告</button>
       }
     </>
 

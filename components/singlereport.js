@@ -59,7 +59,7 @@ export const SingleReport = ({ Results }) => {
         <div className='singleReport'>
             {Object.keys(ViewResult).length == 0 &&
                 <>
-                    <div className="heading">Report History</div>
+                    <div className="heading">举报历史</div>
                     <div className="historyWrapper">
                         {Results.map((result, i) => {
                             return (
@@ -82,7 +82,7 @@ export const SingleReport = ({ Results }) => {
 
                                 };
                             });
-                    }}>View Report</button>
+                    }}>查看报告</button>
                 </>
             }
 
@@ -105,7 +105,7 @@ export const SingleReport = ({ Results }) => {
 
                         //    
                     })}
-                    <button onClick={() => { setViewResult({}) }}>Back to Reports</button>
+                    <button onClick={() => { setViewResult({}) }}>返回报告</button>
 
                 </div>
 
@@ -115,3 +115,6 @@ export const SingleReport = ({ Results }) => {
 
     )
 }
+
+
+

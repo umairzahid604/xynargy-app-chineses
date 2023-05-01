@@ -105,7 +105,7 @@ export const Score = ({ name, AreaResults, algo_tech_name, imageData }) => {
             `}
             </style>
 
-            <div className="algoName"> <div className='name'> <div className='button' onClick={MatricsHandler}> + </div> {name}</div> <span className={`${ScorePosition(value)} tag`}>{ScorePosition(value)} {value}</span></div>
+            <div className="algoName"> <div className='name'> <div className='button' onClick={MatricsHandler}> + </div> { TranslateToChinese(name)} </div> <span className={`${ScorePosition(value)} tag`}>{ ChineseTag(ScorePosition(value))} {value}</span></div>
             <div className={`scoreline ${ScorePosition(value)}`}></div>
             <div className={`submatrics ${expand ? "show" : ""}`}>
                 <div className='matricWrapper'>
@@ -131,7 +131,7 @@ export const Score = ({ name, AreaResults, algo_tech_name, imageData }) => {
                                 }}>
                                     {/* <span>{result?.main_metric.value}</span> */}
 
-                                    <span className={`dot ${ScorePosition(result?.main_metric.value)}`}></span>{result?.area_name}
+                                    <span className={`dot ${ScorePosition(result?.main_metric.value)}`}></span>{ChineseAreas(result?.area_name)}
                                 </div>
 
                             </>
@@ -140,11 +140,11 @@ export const Score = ({ name, AreaResults, algo_tech_name, imageData }) => {
 
                 </div>
                 <div className={`MatricsWrapper ${ShowMatrics ? "showMatricsWrapper" : ""}`} >
-                    <div className="area">{Matrics.name}</div>
+                    <div className="area">{ChineseAreas(Matrics.name)}</div>
                     <div className="line"></div>
-                    <div className="algorithm">{Matrics.algoName}</div>
+                    <div className="algorithm">{TranslateToChinese(Matrics.algoName)}</div>
                     <div className="line"></div>
-                    <div className="condition">OverAll Condition {Matrics.condition}</div>
+                    <div className="condition">整体状况 {ChineseTag(Matrics.condition)}</div>
                     <div className="line"></div>
                     <div className="circleWrapper">
 
@@ -160,4 +160,119 @@ export const Score = ({ name, AreaResults, algo_tech_name, imageData }) => {
 
         </div>
     )
+}
+
+
+const Names = ["Translucency score","Uniformness Score","Hydration Score","Redness Score","ITA score",
+"Eye Area Condition","Acne score","Pigmentation score","Pores Score","Perceived Age","Eye Age","Lines Score"]
+
+
+function TranslateToChinese(text){
+  console.log(text)
+    if(text === Names[0]){
+    return "半透明度分数"
+  }  
+
+  if(text === Names[1]){
+    return "均匀度得分"
+  } 
+
+  if(text === Names[2]){
+    return "水化分数"
+  } 
+
+  if(text === Names[3]){
+    return "发红评分"
+  } 
+   
+  if(text === Names[4]){
+    return "ITA分数"
+  } 
+
+  if(text === Names[5]){
+    return "眼部状况"
+  } 
+    
+  if(text === Names[6]){
+    return "痘痘评分"
+  } 
+
+  if(text === Names[7]){
+    return "色素沉着评分"
+  } 
+
+  if(text === Names[8]){
+    return "毛孔评分"
+  } 
+
+  if(text === Names[9]){
+    return "感知年龄"
+  } 
+
+  if(text === Names[10]){
+    return "眼龄"
+  } 
+
+  if(text === Names[11]){
+    return "线条分数"
+  } 
+
+}
+
+
+function ChineseTag(tag){
+    if(tag === "Excellent"){
+        return "出色的"
+    }
+
+    if(tag === "Great"){
+        return "伟大的"
+
+    }
+
+    if(tag === "Good"){
+        return "好的"
+        
+    }
+    if(tag === "Average"){
+        return "平均的"
+        
+    }
+    if(tag === "Rather Bad"){
+        return "相当糟糕"
+
+    }
+    if(tag === "Bad"){
+        return "坏的"
+
+    }
+
+}
+
+const Areas = ["chin","face","forehead","left_cheek","right_cheek","nose","forehead_n_bridge"]
+
+function ChineseAreas(area){
+    if(area === Areas[0]){
+        return "下巴"
+    }
+
+    if(area === Areas[1]){
+        return "脸"
+    }
+    if(area === Areas[2]){
+        return "前额"
+    }
+    if(area === Areas[3]){
+        return "左脸颊"
+    }
+    if(area === Areas[4]){
+        return "右脸颊"
+    }
+    if(area === Areas[5]){
+        return "鼻子"
+    }
+    if(area === Areas[6]){
+        return "额头和鼻梁"
+    }
+
 }
