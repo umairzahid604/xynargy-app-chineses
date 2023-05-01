@@ -12,6 +12,8 @@ export const CompareReports = ({ Results }) => {
   const [ShowCompareResults, setShowCompareResults] = useState(false)
   const [FirstImageData, setFirstImageData] = useState('');
   const [SecondImageData, setSecondImageData] = useState('');
+  const [Loading, setLoading] = useState(false)
+
 
   const techNames = ['translucency_score', 'uniformness_score', 'hydration_score', 'lines_score', 'redness_score', 'ita_score', 'image_quality_score', 'eye_area_condition',
     'acne_score', 'pigmentation_score', 'Pores_score', 'perceived_age', 'eye_age']
@@ -95,9 +97,12 @@ export const CompareReports = ({ Results }) => {
 
 
             <button onClick={() => {
+              setLoading(true)
               if (!isDatelater(SecondSelectedResult.createdAt, FirstSelectedResult.createdAt)) {
                 setSecondSelectedResult({})
                 setShowCompareResults(false)
+                setLoading(false)
+
                 // alert("date must be greater than")
                 return
               }
@@ -125,6 +130,8 @@ export const CompareReports = ({ Results }) => {
 
 
                           setShowCompareResults(true)
+                          setLoading(false)
+
                         };
                       });
 
@@ -135,7 +142,7 @@ export const CompareReports = ({ Results }) => {
 
 
 
-            }}>View Report</button>
+            }}>{Loading ? "..." : "View Report"}</button>
           </>
 
 
