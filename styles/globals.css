@@ -303,8 +303,8 @@ a {
   }
 
   .CompareReports .ResultBox .scoreWrapper .singleAlgoResult .matricWrapper {
-    left: -4%;
-    top: 1%;
+    /* left: -4%; */
+    /* top: 1%; */
     /* width: 10%; */
   }
 
@@ -455,12 +455,16 @@ a {
 
 
 .ResultBox .singleAlgoResult .submatrics .mask {
-  width: 70%;
-  height: 70%;
-  margin: 40px 0;
+  /* width: 70%; */
+  /* height: 70%; */
+  margin: 40px 40px;
+
+  /* display: flex; */
+  justify-content: center;
+  align-items: center;
   /* margin-left: 100px; */
-  min-height: 300px;
-  min-width: 300px;
+  min-height: 250px;
+  min-width: 250px;
   /* border: 2px solid red; */
   pointer-events: none;
 
@@ -536,7 +540,7 @@ a {
   border-radius: 10px;
   color: white;
   width: 0px;
-  height: 0px;
+  max-height: 0px;
   padding: 10px;
   font-size: 15px;
   text-transform: capitalize;
@@ -555,7 +559,7 @@ a {
 
 .showMatricsWrapper {
   /* display: block; */
-  height: 200px;
+  max-height: 300px;
   width: 200px;
   right: 1%;
 
@@ -688,8 +692,25 @@ a {
   height: 200px;
 }
 
+.CompareReports .singleAlgoResult .matricWrapper{
+  width: 100%;
+  height: auto;
+  /* border: 2px solid red; */
+  display: flex;
+  flex-direction: row;
+  top: 88%;
+}
 
+.CompareReports .singleAlgoResult .matricWrapper .techBox{
+background-color: #2727279a;
+height: auto;
+text-align: center;
+display: flex;
+/* justify-content: center; */
+align-items: center;
+padding: 5px;
 
+}
 
 
 

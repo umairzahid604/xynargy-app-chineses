@@ -1,9 +1,9 @@
 import React from 'react'
-import { useState } from 'react'
+import { useState,useEffect } from 'react'
 import { Score } from './Score'
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
-
+import { AreasScores } from './AreasScores';
 export const CompareReports = ({ Results }) => {
 
 
@@ -18,17 +18,61 @@ export const CompareReports = ({ Results }) => {
   const techNames = ['translucency_score', 'uniformness_score', 'hydration_score', 'lines_score', 'redness_score', 'ita_score', 'image_quality_score', 'eye_area_condition',
     'acne_score', 'pigmentation_score', 'Pores_score', 'perceived_age', 'eye_age']
 
+  const FaceAreas = ["face","forehead","nose","right_cheek","left_cheek","chin"]
 
-  function ExtractTechValues(Result, techName) {
-    console.log(techName)
-    let results = Result.maskedData[0]
-    results = results.filter((el) => el.result?.area_results != undefined && el.result?.area_results.length != 0)
-    let requiredResult = results.find(el => el.result.area_results[0]?.main_metric?.tech_name == techName)
-    // let requiredResult = results.map(el=>el.result.area_results[0]?.main_metric?.tech_name )
-    return requiredResult
-    // console.log(requiredResult)
+  const [FirstReportData, setFirstReportData] = useState([
+    // {name:"face",value:ExtractAreaValue(FirstSelectedResult,FaceAreas[0]),techValues:[...techNames.map(techName=>ExtractTechValuess(FirstSelectedResult,FaceAreas[0],techName))].filter(el=>el!=undefined)},
+    {name:"forehead",value:"",techValues:[]},
+    {name:"nose",value:"",techValues:[]},
+    {name:"left cheek",value:"",techValues:[]},
+    {name:"right cheek",value:"",techValues:[]},
+    {name:"chin",value:"",techValues:[]},
 
-  }
+  ])
+  
+
+useEffect(() => {
+  // ExtractAreaValue(Results[0],"chin","translucency_score")
+
+}, [])
+
+function ExtractAreaValue(Result,areaName){
+  let results = Result.maskedData[0]
+  let value = 0
+  results = results.filter((el) => el.result?.area_results != undefined && el.result?.area_results.length != 0)
+  results = results.map(el=> el.result?.area_results?.find(el=>el.area_name === areaName)).filter((el=> el!=undefined))
+  results.map((el)=> {value += el?.main_metric?.value})
+  // let result = results.find(el=>el.main_metric.tech_name === techName)
+  console.log(parseInt(value/results.length))
+  // if(result?.main_metric.name) return undefined
+  return parseInt(value/results.length)
+ 
+}
+
+
+function ExtractTechValues(Result,areaName,techName){
+  let results = Result.maskedData[0]
+  results = results.filter((el) => el.result?.area_results != undefined && el.result?.area_results.length != 0)
+  results = results.map(el=> el.result?.area_results?.find(el=>el.area_name === areaName)).filter((el=> el!=undefined))
+  let result = results.find(el=>el.main_metric.tech_name === techName)
+  console.log(result?.main_metric.name)
+  if(!result?.main_metric.name || result?.main_metric?.name === "Image Quality Score") return undefined
+  return {name:result?.main_metric.name,value:result?.main_metric?.value}
+ 
+}
+
+
+  // const FaceAreas = ["face","forehead","nose","right_cheek","left_cheek","chin"]
+  // function ExtractTechValues(Result, techName) {
+  //   // console.log(techName)
+  //   let results = Result.maskedData[0]
+  //   results = results.filter((el) => el.result?.area_results != undefined && el.result?.area_results.length != 0)
+  //   let requiredResult = results.find(el => el.result.area_results[0]?.main_metric?.tech_name == techName)
+  //   // let requiredResult = results.map(el=>el.result.area_results[0]?.main_metric?.tech_name )
+  //   return requiredResult
+  //   // console.log(requiredResult)
+
+  // }
 
 
 
@@ -42,7 +86,7 @@ export const CompareReports = ({ Results }) => {
 
   function GetFullyear(date) {
     let dateobj = new Date(date)
-    return `${dateobj.getFullYear()}-${dateobj.getMonth()}-${dateobj.getDate()}`
+    return `${dateobj.getFullYear()}/${dateobj.getMonth()+1}/${dateobj.getDate()}`
   }
 
   function extractTime(dateString) {
@@ -115,7 +159,17 @@ export const CompareReports = ({ Results }) => {
                   reader.onloadend = () => {
                     const base64data = reader.result;
                     setFirstImageData(base64data);
-                    setFirstSelectedResult({ email: FirstSelectedResult.email, createdAt: FirstSelectedResult.createdAt, techs: [...techNames.map((techname) => ExtractTechValues(FirstSelectedResult, techname))] })
+                    setFirstSelectedResult({ 
+                      email: FirstSelectedResult.email, 
+                      createdAt: FirstSelectedResult.createdAt, 
+                      techs: [
+                      {name:"face",value:ExtractAreaValue(FirstSelectedResult,FaceAreas[0]),techValues:[...techNames.map(techName=>ExtractTechValues(FirstSelectedResult,FaceAreas[0],techName))].filter(el=>el!=undefined)},
+                      {name:"forehead",value:ExtractAreaValue(FirstSelectedResult,FaceAreas[1]),techValues:[...techNames.map(techName=>ExtractTechValues(FirstSelectedResult,FaceAreas[1],techName))].filter(el=>el!=undefined)},
+                      {name:"nose",value:ExtractAreaValue(FirstSelectedResult,FaceAreas[2]),techValues:[...techNames.map(techName=>ExtractTechValues(FirstSelectedResult,FaceAreas[2],techName))].filter(el=>el!=undefined)},
+                      {name:"left cheek",value:ExtractAreaValue(FirstSelectedResult,FaceAreas[3]),techValues:[...techNames.map(techName=>ExtractTechValues(FirstSelectedResult,FaceAreas[3],techName))].filter(el=>el!=undefined)},
+                      {name:"right cheek",value:ExtractAreaValue(FirstSelectedResult,FaceAreas[4]),techValues:[...techNames.map(techName=>ExtractTechValues(FirstSelectedResult,FaceAreas[4],techName))].filter(el=>el!=undefined)},
+                      {name:"chin",value:ExtractAreaValue(FirstSelectedResult,FaceAreas[5]),techValues:[...techNames.map(techName=>ExtractTechValues(FirstSelectedResult,FaceAreas[5],techName))].filter(el=>el!=undefined)},
+                    ] })
 
                     // second image
                     fetch(SecondSelectedResult.imageUrl)
@@ -127,7 +181,17 @@ export const CompareReports = ({ Results }) => {
                           const base64data = reader.result;
                           setSecondImageData(base64data);
                           setSecondSelectedResult({ email: SecondSelectedResult.email, createdAt: SecondSelectedResult.createdAt, techs: [...techNames.map((techname) => ExtractTechValues(SecondSelectedResult, techname))] })
-
+                          setSecondSelectedResult({ 
+                            email: SecondSelectedResult.email, 
+                            createdAt: SecondSelectedResult.createdAt, 
+                            techs: [
+                            {name:"face",value:ExtractAreaValue(SecondSelectedResult,FaceAreas[0]),techValues:[...techNames.map(techName=>ExtractTechValues(SecondSelectedResult,FaceAreas[0],techName))].filter(el=>el!=undefined)},
+                            {name:"forehead",value:ExtractAreaValue(SecondSelectedResult,FaceAreas[1]),techValues:[...techNames.map(techName=>ExtractTechValues(SecondSelectedResult,FaceAreas[1],techName))].filter(el=>el!=undefined)},
+                            {name:"nose",value:ExtractAreaValue(SecondSelectedResult,FaceAreas[2]),techValues:[...techNames.map(techName=>ExtractTechValues(SecondSelectedResult,FaceAreas[2],techName))].filter(el=>el!=undefined)},
+                            {name:"left cheek",value:ExtractAreaValue(SecondSelectedResult,FaceAreas[3]),techValues:[...techNames.map(techName=>ExtractTechValues(SecondSelectedResult,FaceAreas[3],techName))].filter(el=>el!=undefined)},
+                            {name:"right cheek",value:ExtractAreaValue(SecondSelectedResult,FaceAreas[4]),techValues:[...techNames.map(techName=>ExtractTechValues(SecondSelectedResult,FaceAreas[4],techName))].filter(el=>el!=undefined)},
+                            {name:"chin",value:ExtractAreaValue(SecondSelectedResult,FaceAreas[5]),techValues:[...techNames.map(techName=>ExtractTechValues(SecondSelectedResult,FaceAreas[5],techName))].filter(el=>el!=undefined)},
+                          ] })
 
                           setShowCompareResults(true)
                           setLoading(false)
@@ -137,10 +201,6 @@ export const CompareReports = ({ Results }) => {
 
                   };
                 });
-
-
-
-
 
             }}>{Loading ? "..." : "查看报告"}</button>
           </>
@@ -159,21 +219,19 @@ export const CompareReports = ({ Results }) => {
               <div className="scoreWrapper">
 
                 {FirstSelectedResult.techs.map((result, i) => {
-                  if (result?.result?.area_results?.length != undefined && result?.result?.area_results?.length != 0) {
+                  
+                  return(
+                    <>
+                    <AreasScores key={i} imageData={FirstImageData} algo_tech_name={""} name={result.name} nameValue={result.value} techValues={result?.techValues} currentResult={false} previousResult={FirstSelectedResult.techs[i]} previousDate={FirstSelectedResult.createdAt} currentDate={SecondSelectedResult.createdAt}/>
+                    
+                    </>
+                  )
 
-                    if (isRequired(result?.result?.area_results[0]?.main_metric?.name)) {
-                      return (
-                        <>
-                          <Score key={i} imageData={FirstImageData} algo_tech_name={result?.result?.algorithm_tech_name} name={result?.result?.area_results[0]?.main_metric?.name} AreaResults={result?.result?.area_results} />
-
-                        </>
-                      )
-                    }
-
-                  }
-
-                  //    
                 })}
+
+                
+
+                
               </div>
 
             </div>
@@ -186,20 +244,14 @@ export const CompareReports = ({ Results }) => {
               <div className="scoreWrapper">
 
                 {SecondSelectedResult.techs.map((result, i) => {
-                  if (result?.result?.area_results?.length != undefined && result?.result?.area_results?.length != 0) {
-
-                    if (isRequired(result?.result?.area_results[0]?.main_metric?.name)) {
-                      return (
-                        <>
-                          <Score key={i} imageData={SecondImageData} algo_tech_name={result?.result?.algorithm_tech_name} name={result?.result?.area_results[0]?.main_metric?.name} AreaResults={result?.result?.area_results} />
-
-                        </>
-                      )
-                    }
-
-                  }
-
-                  //    
+                  
+                    
+                  return(
+                    <>
+                    <AreasScores key={i} imageData={SecondImageData} algo_tech_name={""} name={result.name} nameValue={result.value} techValues={result?.techValues} currentResult={true} previousResult={FirstSelectedResult.techs[i]} previousDate={FirstSelectedResult.createdAt} currentDate={SecondSelectedResult.createdAt} />
+                    </>
+                  )
+                  
                 })}
               </div>
 
